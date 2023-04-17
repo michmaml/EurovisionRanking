@@ -8,7 +8,5 @@
 import Foundation
 
 struct SongDataManager {
-    public func modify(string: String) {
-        print(string)
-    }
+
 }

@@ -10,6 +10,7 @@ import SwiftUI
 class SongsHelper {
     static var songs = Song.data
     static var rankedSongs: [Song] = []
+    static var comparedPairs: Set<String> = []
     
     static func generateTwoSongs() -> (Song, Song) {
         let firstSong: Song
@@ -17,7 +18,6 @@ class SongsHelper {
 
         let repeatedScores = findSongsWithSameScore()
          if rankedSongs.count == 0 || repeatedScores == nil {
-            // TODO: Add a case when went through all the songs
             let firstIndex = Int.random(in: 0..<songs.count)
             firstSong = songs.remove(at: firstIndex)
             let secondIndex = Int.random(in: 0..<songs.count)
@@ -32,32 +32,59 @@ class SongsHelper {
     static func addRankedSongs(songs: [Song]) {
         songs.forEach { song in
             if let index = rankedSongs.firstIndex(where: { $0.videoID == song.videoID }) {
-                rankedSongs[index].score += song.score
+                rankedSongs[index] = song
             } else {
-                let index = rankedSongs.firstIndex(where: { $0.score >= song.score }) ?? rankedSongs.endIndex
+                let index = rankedSongs.firstIndex(where: {
+                    $0.wins >= song.wins
+                }) ?? rankedSongs.endIndex
                 rankedSongs.insert(song, at: index)
+                //adjustWins(index + 1)
             }
         }
-        print(rankedSongs)
+        comparedPairs.insert(getComparisonKey(songs))
+        print(comparedPairs)
     }
     
     static func findSongsWithSameScore() -> (Song, Song)? {
         var scores: Set<Int> = []
         for song in rankedSongs {
-            if scores.contains(song.score) {
-                let previousSong = rankedSongs.first(where: { $0.score == song.score })!
-                return (previousSong, song)
+            if scores.contains(song.wins) {
+                let previousSong = rankedSongs.first(where: {
+                    $0.wins >= song.wins
+                })!
+                if !comparedPairs.contains(getComparisonKey([previousSong, song])) {
+                    return (previousSong, song)
+                }
             } else {
-                scores.insert(song.score)
+                scores.insert(song.wins)
             }
         }
         return nil
     }
+    
+    static func adjustWins(_ index: Int) -> Void {
+        //var result = rankedSongs
+        for i in index-1..<rankedSongs.count-1 {
+            rankedSongs[i].wins += rankedSongs[i+1].wins
+        }
+        //rankedSongs = result
+    }
+    
+    static func getComparisonKey(_ songs: [Song]) -> String {
+        let sortedStrings = [songs[0].country, songs[1].country].sorted()
+        return sortedStrings.joined(separator: "-")
+    }
+    
+    static func sortSongs(_ adam: [Song]) -> [Song] {
+        adam.sorted {
+            $0.losses < $1.losses
+        }.sorted { $0.wins > $1.wins }
+    }
 }
 
 struct ContentView: View {
-    @State private var song1: Song = Song(country: "", videoID: "", score: 0)
-    @State private var song2: Song = Song(country: "", videoID: "", score: 0)
+    @State private var song1: Song = Song(country: "", videoID: "", wins: 0, losses: 0)
+    @State private var song2: Song = Song(country: "", videoID: "", wins: 0, losses: 0)
     @State private var finishedRanking = false
     //let sdm = SongDataManager()
     
@@ -65,10 +92,14 @@ struct ContentView: View {
         VStack {
             SongView(song: song1)
             Button {
-                song1.score += 1
-                song2.score -= 1
+                song1.wins += 1
+                song2.losses += 1
                 SongsHelper.addRankedSongs(songs: [song1, song2])
-                (song1, song2) = SongsHelper.generateTwoSongs()
+                if SongsHelper.songs.count == 0 {
+                    finishedRanking = true
+                } else {
+                    (song1, song2) = SongsHelper.generateTwoSongs()
+                }
                 //SongsHelper.setScores(winner: song1, loser: song2)
                 //sdm.modify(string: "Clicked \(song1.country)")
             } label: {
@@ -80,16 +111,20 @@ struct ContentView: View {
             
             SongView(song: song2)
             Button {
-                song1.score -= 1
-                song2.score += 1
+                song1.losses += 1
+                song2.wins += 1
                 SongsHelper.addRankedSongs(songs: [song1, song2])
-                (song1, song2) = SongsHelper.generateTwoSongs()
+                if SongsHelper.songs.count == 0 {
+                    finishedRanking = true
+                } else {
+                    (song1, song2) = SongsHelper.generateTwoSongs()
+                }
             } label: {
                 Text("Choose")
             }.buttonStyle(.bordered)
         }.padding()
             .sheet(isPresented: $finishedRanking) {
-                SecondView() // <- pass rankedListOfSongs: <rankedSongs>
+                RankingView(rankedListOfSongs: SongsHelper.rankedSongs)
             }
             .onAppear {
                 if SongsHelper.songs.count == 0 {
@@ -109,15 +144,17 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-struct SecondView: View {
-    //let rankedListOfSongs: [Song]
+struct RankingView: View {
+    let rankedListOfSongs: [Song]
     var body: some View {
         VStack {
             Image("EUROVISION")
                 .resizable()
                 .scaledToFit()
                 .frame(width: 100, height: 100)
-            Text("Sheet") // <- pass rankedListOfSongs
+            ForEach(SongsHelper.sortSongs(rankedListOfSongs)) { song in
+                Text("\(song.country), W = \(song.wins) | L = \(song.losses)")
+            }
         }
     }
 }

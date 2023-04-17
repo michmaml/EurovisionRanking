@@ -11,7 +11,7 @@ import SwiftUI
 struct EurovisionRankingApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView(songs: Song.data)
+            ContentView()
         }
     }
 }

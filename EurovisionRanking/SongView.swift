@@ -16,11 +16,6 @@ struct SongView: View {
                 .frame(minHeight: 0, maxHeight: UIScreen.main.bounds.height * 0.3)
                 .cornerRadius(10)
                 .padding(.horizontal, 12)
-            Button {
-                print("button 1 clicked")
-            } label: {
-                Text("Choose")
-            }.buttonStyle(.bordered)
         }
     }
 }

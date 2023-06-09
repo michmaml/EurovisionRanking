@@ -11,8 +11,8 @@ struct ContentView: View {
     @State var songs = Song.data
     @State var rankedSongs: [Song] = []
     @State var comparedPairs: Set<String> = []
-    @State private var song1: Song = Song(country: "", videoID: "", wins: 0, losses: 0)
-    @State private var song2: Song = Song(country: "", videoID: "", wins: 0, losses: 0)
+    @State private var song1: Song = Song(country: "", artist: "", title: "", videoID: "", wins: 0, losses: 0)
+    @State private var song2: Song = Song(country: "", artist: "", title: "", videoID: "", wins: 0, losses: 0)
     @State private var finishedRanking = false
     
     var body: some View {

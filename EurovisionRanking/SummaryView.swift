@@ -15,9 +15,16 @@ struct SummaryView: View {
                 .resizable()
                 .scaledToFit()
                 .frame(width: 100, height: 100)
-            ForEach(Array(sortSongs(songs).enumerated()), id: \.offset) { index, song in
-                Text("#\(index+1): \(song.country)")
-                // Text("\(song.country), W = \(song.wins) | L = \(song.losses)")
+            ScrollView {
+                ForEach(Array(sortSongs(songs).enumerated()), id: \.offset) { index, song in
+                    
+                    HStack {
+                        Text("\(index+1).")
+                            .font(.title3)
+                            .bold()
+                        CountryView(song: song)
+                    }.padding(.horizontal, 12)
+                }
             }
         }
     }
@@ -42,8 +49,7 @@ struct SummaryView: View {
 }
 
 struct SummaryView_Previews: PreviewProvider {
-    static var rankedSongs: [Song] = []
     static var previews: some View {
-        SummaryView(songs: rankedSongs)
+        SummaryView(songs: Song.data)
     }
 }

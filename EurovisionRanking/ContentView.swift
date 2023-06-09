@@ -11,9 +11,10 @@ struct ContentView: View {
     @State var songs = Song.data
     @State var rankedSongs: [Song] = []
     @State var comparedPairs: Set<String> = []
-    @State private var song1: Song = Song(country: "", videoID: "", wins: 0, losses: 0)
-    @State private var song2: Song = Song(country: "", videoID: "", wins: 0, losses: 0)
+    @State private var song1: Song = Song(country: "", artist: "", title: "", videoID: "", wins: 0, losses: 0)
+    @State private var song2: Song = Song(country: "", artist: "", title: "", videoID: "", wins: 0, losses: 0)
     @State private var finishedRanking = false
+    let svm: SongViewModel
     
     var body: some View {
         VStack {
@@ -66,7 +67,7 @@ struct ContentView: View {
         var firstSong: Song
         var secondSong: Song
 
-        var repeatedScores = findSongsWithSameScore()
+        var repeatedScores = svm.findSongsWithSameScore(forRankedSongs: rankedSongs, comparedPairs: comparedPairs)
         if rankedSongs.count == 0 || repeatedScores == nil {
            let firstIndex = Int.random(in: 0..<songs.count)
            firstSong = songs.remove(at: firstIndex)
@@ -91,35 +92,12 @@ struct ContentView: View {
                 rankedSongs.insert(song, at: index)
             }
         }
-        comparedPairs.insert(getComparisonKey(songs))
-    }
-    
-    func findSongsWithSameScore() -> (Song, Song)? {
-        var scores: Set<Int> = []
-        for song in rankedSongs {
-            if scores.contains(song.wins) {
-                let previousSong = rankedSongs.first(where: {
-                    $0.wins + $0.losses >= song.wins + song.losses
-                })!
-                if (!comparedPairs.contains(getComparisonKey([previousSong, song])) &&
-                    previousSong.videoID != song.videoID) {
-                    return (previousSong, song)
-                }
-            } else {
-                scores.insert(song.wins)
-            }
-        }
-        return nil
-    }
-
-    func getComparisonKey(_ songs: [Song]) -> String {
-        let sortedStrings = [songs[0].country, songs[1].country].sorted()
-        return sortedStrings.joined(separator: "-")
+        comparedPairs.insert(svm.getComparisonKey(forPreviousSong: songs[0], currentSong: songs[1]))
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(svm: SongViewModel())
     }
 }

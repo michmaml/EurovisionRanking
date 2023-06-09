@@ -59,11 +59,13 @@
 		296E4EA329ED5A3800B51CA3 /* EurovisionRanking */ = {
 			isa = PBXGroup;
 			children = (
+				298BC9EE2A33157000B98536 /* Views */,
 				296E4EB429ED6BAD00B51CA3 /* Models */,
 				296E4EA429ED5A3800B51CA3 /* EurovisionRankingApp.swift */,
 				296E4EB729ED71B600B51CA3 /* SongView.swift */,
 				296E4EA629ED5A3800B51CA3 /* ContentView.swift */,
 				296E4EBB29EEB0E000B51CA3 /* SummaryView.swift */,
+				29B492A52A1E0022005EDF19 /* SongViewModel.swift */,
 				296E4EB229ED680200B51CA3 /* VideoView.swift */,
 				296E4EA829ED5A3900B51CA3 /* Assets.xcassets */,
 				296E4EAA29ED5A3900B51CA3 /* Preview Content */,
@@ -103,6 +105,8 @@
 			dependencies = (
 			);
 			name = EurovisionRanking;
+			packageProductDependencies = (
+			);
 			productName = EurovisionRanking;
 			productReference = 296E4EA129ED5A3800B51CA3 /* EurovisionRanking.app */;
 			productType = "com.apple.product-type.application";
@@ -131,6 +135,9 @@
 				Base,
 			);
 			mainGroup = 296E4E9829ED5A3800B51CA3;
+			packageReferences = (
+				298BCA032A331C7D00B98536 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
+			);
 			productRefGroup = 296E4EA229ED5A3800B51CA3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -158,11 +165,33 @@
 			buildActionMask = 2147483647;
 			files = (
 				296E4EB629ED6BBA00B51CA3 /* Song.swift in Sources */,
+				298BC9F02A33159900B98536 /* HeartFlagView.swift in Sources */,
 				296E4EB329ED680200B51CA3 /* VideoView.swift in Sources */,
+				298BC9F22A3316FC00B98536 /* CountryView.swift in Sources */,
 				296E4EB829ED71B600B51CA3 /* SongView.swift in Sources */,
 				296E4EA729ED5A3800B51CA3 /* ContentView.swift in Sources */,
 				296E4EA529ED5A3800B51CA3 /* EurovisionRankingApp.swift in Sources */,
 				296E4EBC29EEB0E000B51CA3 /* SummaryView.swift in Sources */,
+				29B492A62A1E0022005EDF19 /* SongViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29B492A72A1E04B0005EDF19 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29B492AE2A1E04B0005EDF19 /* EurovisionRankingTests.swift in Sources */,
+				29B492B52A1E04DE005EDF19 /* SongViewModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		298BC9F32A331C1300B98536 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				298BC9FA2A331C1300B98536 /* EurovisionRankingTests.swift in Sources */,
+				298BCA072A331CB500B98536 /* CountryViewSnapshotTests.swift in Sources */,
+				298BCA092A33661300B98536 /* HeartFlagViewSnapshotTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,6 +390,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		298BCA032A331C7D00B98536 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-snapshot-testing";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		298BCA042A331C7D00B98536 /* SnapshotTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 298BCA032A331C7D00B98536 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			productName = SnapshotTesting;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 296E4E9929ED5A3800B51CA3 /* Project object */;
 }

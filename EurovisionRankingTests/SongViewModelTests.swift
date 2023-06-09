@@ -22,19 +22,35 @@ final class SongViewModelTests: XCTestCase {
         sut = nil
     }
 
-    func test_getComparisonKey() {
+    func test_findSongsWithSameScore() {
         // given
-        let songs = [
-            Song(country: "Spain", videoID: "NGnEoSypBhE", wins: 0, losses: 0),
-            Song(country: "Serbia", videoID: "oeIVwYUge8o", wins: 0, losses: 0),
-            Song(country: "Moldova", videoID: "se9LDgFW6ak", wins: 0, losses: 0)
+        let rankedSongs = [
+            Song(country: "Spain", videoID: "NGnEoSypBhE", wins: 3, losses: 1),
+            Song(country: "Serbia", videoID: "oeIVwYUge8o", wins: 2, losses: 1),
+            Song(country: "Moldova", videoID: "se9LDgFW6ak", wins: 0, losses: 0),
+            Song(country: "France", videoID: "GWfbEFH9NvQ", wins: 0, losses: 0),
+            Song(country: "Finland", videoID: "rJHe-iZ5HSI", wins: 0, losses: 4)
         ]
+        let comparedSongs : Set = ["Serbia-Spain", "Moldova-Spain", "Finland-France", "Finland-Spain"]
         
         // when
-        let result = sut.getComparisonKey(songs)
+        let result = sut.findSongsWithSameScore(forRankedSongs: rankedSongs, comparedPairs: comparedSongs)
+        let expectedTuple = (Song(country: "Moldova", videoID: "se9LDgFW6ak", wins: 0, losses: 0),
+                             Song(country: "France", videoID: "GWfbEFH9NvQ", wins: 0, losses: 0))
         
         // then
-        XCTAssertEqual(result, "Spain-Serbia")
+        XCTAssertTrue(result == expectedTuple)
+    }
+    
+    func test_getComparisonKey() {
+        // given
+        let previousSong = Song(country: "Spain", videoID: "NGnEoSypBhE", wins: 0, losses: 0)
+        let currentSong = Song(country: "Serbia", videoID: "oeIVwYUge8o", wins: 0, losses: 0)
         
+        // when
+        let result = sut.getComparisonKey(forPreviousSong: previousSong, currentSong: currentSong)
+        
+        // then
+        XCTAssertEqual(result, "Serbia-Spain")
     }
 }

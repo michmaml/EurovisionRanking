@@ -67,7 +67,7 @@ struct ContentView: View {
         var firstSong: Song
         var secondSong: Song
 
-        var repeatedScores = svm.findSongsWithSameScore(rankedSongs, comparedPairs)
+        var repeatedScores = svm.findSongsWithSameScore(forRankedSongs: rankedSongs, comparedPairs: comparedPairs)
         if rankedSongs.count == 0 || repeatedScores == nil {
            let firstIndex = Int.random(in: 0..<songs.count)
            firstSong = songs.remove(at: firstIndex)
@@ -92,7 +92,7 @@ struct ContentView: View {
                 rankedSongs.insert(song, at: index)
             }
         }
-        comparedPairs.insert(svm.getComparisonKey(songs))
+        comparedPairs.insert(svm.getComparisonKey(forPreviousSong: songs[0], currentSong: songs[1]))
     }
 }
 

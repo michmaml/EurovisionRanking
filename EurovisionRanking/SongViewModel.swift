@@ -1,5 +1,5 @@
 //
-//  CompareASo.swift
+//  SongViewModel.swift
 //  EurovisionRanking
 //
 //  Created by Michal Sekulski on 24/05/2023.

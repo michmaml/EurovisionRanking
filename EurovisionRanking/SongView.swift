@@ -11,12 +11,11 @@ struct SongView: View {
     let song: Song
     var body: some View {
         VStack {
-            Text("\(song.country)'s song:")
+            CountryView(song: song)
             VideoView(videoID: song.videoID)
                 .frame(minHeight: 0, maxHeight: UIScreen.main.bounds.height * 0.3)
                 .cornerRadius(10)
-                .padding(.horizontal, 12)
-        }
+        }.padding(.horizontal, 12)
     }
 }
 

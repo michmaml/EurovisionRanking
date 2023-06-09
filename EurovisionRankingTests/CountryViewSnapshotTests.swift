@@ -60,8 +60,7 @@ final class CountryViewSnapshotTests: XCTestCase {
         // When
         let countryView = CountryView(song: song)
         let view: UIView = UIHostingController(rootView: countryView).view
-        view.semanticContentAttribute = .forceRightToLeft
-        assertSnapshot(matching: view, as: .image(size: view.intrinsicContentSize)
-        )
+        assertSnapshot(matching: view, as: .image(size: view.intrinsicContentSize,
+                                                 traits: .init(layoutDirection: .rightToLeft)))
     }
 }

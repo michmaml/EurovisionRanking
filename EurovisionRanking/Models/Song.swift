@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Song: Identifiable {
+struct Song: Identifiable, Decodable {
     let id = UUID()
     let country: String
     

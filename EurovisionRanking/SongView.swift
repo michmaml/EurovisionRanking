@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SongView: View {
     let song: Song
+    let network = Network()
     var body: some View {
         VStack {
             CountryView(song: song)

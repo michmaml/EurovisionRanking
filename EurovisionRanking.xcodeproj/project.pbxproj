@@ -22,6 +22,8 @@
 		298BCA072A331CB500B98536 /* CountryViewSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298BCA062A331CB500B98536 /* CountryViewSnapshotTests.swift */; };
 		298BCA092A33661300B98536 /* HeartFlagViewSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298BCA082A33661300B98536 /* HeartFlagViewSnapshotTests.swift */; };
 		29A02CCD2A3722A800707244 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A02CCC2A3722A800707244 /* CardView.swift */; };
+		29A02CCF2A37381200707244 /* SongViewSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A02CCE2A37381200707244 /* SongViewSnapshotTests.swift */; };
+		29A02CD12A37403700707244 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A02CD02A37403700707244 /* Network.swift */; };
 		29CD8E182A3372DE009BD4C6 /* SongViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CD8E172A3372DE009BD4C6 /* SongViewModel.swift */; };
 		B337CBCA2DBE62CEF23F1020 /* Pods_EurovisionRanking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB93044A7FAAB9656DE3B3A6 /* Pods_EurovisionRanking.framework */; };
 /* End PBXBuildFile section */
@@ -54,6 +56,8 @@
 		298BCA062A331CB500B98536 /* CountryViewSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryViewSnapshotTests.swift; sourceTree = "<group>"; };
 		298BCA082A33661300B98536 /* HeartFlagViewSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartFlagViewSnapshotTests.swift; sourceTree = "<group>"; };
 		29A02CCC2A3722A800707244 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		29A02CCE2A37381200707244 /* SongViewSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongViewSnapshotTests.swift; sourceTree = "<group>"; };
+		29A02CD02A37403700707244 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		29CD8E172A3372DE009BD4C6 /* SongViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongViewModel.swift; sourceTree = "<group>"; };
 		2A3B82901CEA19247FCC8B23 /* Pods_EurovisionRankingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EurovisionRankingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		515597BC19C6BDC2D96EF1DC /* Pods-EurovisionRankingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EurovisionRankingTests.debug.xcconfig"; path = "Target Support Files/Pods-EurovisionRankingTests/Pods-EurovisionRankingTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -127,6 +131,7 @@
 				296E4EBB29EEB0E000B51CA3 /* SummaryView.swift */,
 				296E4EA829ED5A3900B51CA3 /* Assets.xcassets */,
 				296E4EAA29ED5A3900B51CA3 /* Preview Content */,
+				29A02CD02A37403700707244 /* Network.swift */,
 			);
 			path = EurovisionRanking;
 			sourceTree = "<group>";
@@ -161,6 +166,7 @@
 			children = (
 				298BC9F92A331C1300B98536 /* EurovisionRankingTests.swift */,
 				298BCA062A331CB500B98536 /* CountryViewSnapshotTests.swift */,
+				29A02CCE2A37381200707244 /* SongViewSnapshotTests.swift */,
 				298BCA082A33661300B98536 /* HeartFlagViewSnapshotTests.swift */,
 			);
 			path = EurovisionRankingTests;
@@ -365,6 +371,7 @@
 				296E4EB329ED680200B51CA3 /* VideoView.swift in Sources */,
 				298BC9F22A3316FC00B98536 /* CountryView.swift in Sources */,
 				29A02CCD2A3722A800707244 /* CardView.swift in Sources */,
+				29A02CD12A37403700707244 /* Network.swift in Sources */,
 				296E4EB829ED71B600B51CA3 /* SongView.swift in Sources */,
 				296E4EA729ED5A3800B51CA3 /* ContentView.swift in Sources */,
 				296E4EA529ED5A3800B51CA3 /* EurovisionRankingApp.swift in Sources */,
@@ -380,6 +387,7 @@
 				298BC9FA2A331C1300B98536 /* EurovisionRankingTests.swift in Sources */,
 				298BCA072A331CB500B98536 /* CountryViewSnapshotTests.swift in Sources */,
 				298BCA092A33661300B98536 /* HeartFlagViewSnapshotTests.swift in Sources */,
+				29A02CCF2A37381200707244 /* SongViewSnapshotTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

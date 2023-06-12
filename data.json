@@ -1,0 +1,84 @@
+{
+    "countries": [
+        {
+            "id": 1,
+            "country_name": "Spain",
+            "artist_name": "Blanca Paloma",
+            "song_name": "Eaea",
+            "video_id": "NGnEoSypBhE",
+            "flag_url": "https://raw.githubusercontent.com/gert-janvercauteren/mockapi/main/flags/esc_spain_rgb-heart.png"
+        },
+        {
+            "id": 2,
+            "country_name": "Serbia",
+            "artist_name": "Luke Black",
+            "song_name": "Samo mi se spava",
+            "video_id": "oeIVwYUge8o",
+            "flag_url": "https://raw.githubusercontent.com/gert-janvercauteren/mockapi/main/flags/esc_serbia_rgb-heart.png"
+        },
+        {
+            "id": 3,
+            "country_name": "Moldova",
+            "artist_name": "Pasha Parfeni",
+            "song_name": "Soarele și Luna",
+            "video_id": "se9LDgFW6ak",
+            "flag_url": "https://raw.githubusercontent.com/gert-janvercauteren/mockapi/main/flags/esc_moldova_rgb-heart.png"
+        },
+        {
+            "id": 4,
+            "country_name": "Austria",
+            "artist_name": "Teya & Salena",
+            "song_name": "[PLACEHOLDER]",
+            "video_id": "[PLACEHOLDER]",
+            "flag_url": "https://raw.githubusercontent.com/gert-janvercauteren/mockapi/main/flags/esc_austria_rgb-heart.png"
+        },
+        {
+            "id": 5,
+            "country_name": "Finland",
+            "artist_name": "Käärijä",
+            "song_name": "Cha Cha Cha",
+            "video_id": "rJHe-iZ5HSI",
+            "flag_url": "https://raw.githubusercontent.com/gert-janvercauteren/mockapi/main/flags/esc_finland_rgb-heart.png"
+        },
+        {
+            "id": 6,
+            "country_name": "Slovenia",
+            "artist_name": "Joker Out",
+            "song_name": "Carpe Diem",
+            "video_id": "vfTiuZaESKs",
+            "flag_url": "https://raw.githubusercontent.com/gert-janvercauteren/mockapi/main/flags/esc_slovenia_rgb-heart.png"
+        },
+        {
+            "id": 7,
+            "country_name": "Chechia",
+            "artist_name": "Vesna",
+            "song_name": "[PLACEHOLDER]",
+            "video_id": "[PLACEHOLDER]",
+            "flag_url": "https://raw.githubusercontent.com/gert-janvercauteren/mockapi/main/flags/esc_chechia_rgb-heart.png"
+        },
+        {
+            "id": 8,
+            "country_name": "France",
+            "artist_name": "La Zarra",
+            "song_name": "Évidemment",
+            "video_id": "GWfbEFH9NvQ",
+            "flag_url": "https://raw.githubusercontent.com/gert-janvercauteren/mockapi/main/flags/esc_france_rgb-heart.png"
+        },
+        {
+            "id": 9,
+            "country_name": "Georgia",
+            "artist_name": "Iru",
+            "song_name": "Echo",
+            "video_id": "E8kO-QPippo",
+            "flag_url": "https://raw.githubusercontent.com/gert-janvercauteren/mockapi/main/flags/esc_georgia_rgb-heart.png"
+        },
+        {
+            "id": 10,
+            "country_name": "Portugal",
+            "artist_name": "Mimicat",
+            "song_name": "Ai Coração",
+            "video_id": "wa3suiOzAAk",
+            "flag_url": "https://raw.githubusercontent.com/gert-janvercauteren/mockapi/main/flags/esc_portugal_rgb-heart.png"
+        }
+    ]
+}

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Backpack_SwiftUI
 
 struct ContentView: View {
     @State var songs = Song.data
@@ -17,38 +18,49 @@ struct ContentView: View {
     let svm: SongViewModel
     
     var body: some View {
-        VStack {
-            SongView(song: song1)
-            Button {
-                song1.wins += 1
-                song2.losses += 1
-                addRankedSongs(songs: [song1, song2])
-                if songs.count == 0 {
-                    finishedRanking = true
-                } else {
-                    (song1, song2) = generateTwoSongs()
+        ZStack {
+            Color(BPKColor.canvasColor).ignoresSafeArea()
+            VStack {
+                BPKCard {
+                    VStack {
+                        SongView(song: song1)
+                        Button {
+                            song1.wins += 1
+                            song2.losses += 1
+                            addRankedSongs(songs: [song1, song2])
+                            if songs.count == 0 {
+                                finishedRanking = true
+                            } else {
+                                (song1, song2) = generateTwoSongs()
+                            }
+                        } label: {
+                            Text("Choose")
+                        }.buttonStyle(.bordered)
+                    }
                 }
-            } label: {
-                Text("Choose")
-            }.buttonStyle(.bordered)
-            
-            Spacer()
-            Spacer()
-            
-            SongView(song: song2)
-            Button {
-                song1.losses += 1
-                song2.wins += 1
-                addRankedSongs(songs: [song1, song2])
-                if songs.count == 0 {
-                    finishedRanking = true
-                } else {
-                    (song1, song2) = generateTwoSongs()
+                
+                Spacer()
+                Spacer()
+                
+                BPKCard {
+                    VStack {
+                        SongView(song: song2)
+                        Button {
+                            song2.wins += 1
+                            song1.losses += 1
+                            addRankedSongs(songs: [song1, song2])
+                            if songs.count == 0 {
+                                finishedRanking = true
+                            } else {
+                                (song1, song2) = generateTwoSongs()
+                            }
+                        } label: {
+                            Text("Choose")
+                        }.buttonStyle(.bordered)
+                    }
                 }
-            } label: {
-                Text("Choose")
-            }.buttonStyle(.bordered)
-        }.padding()
+            }
+            .padding()
             .sheet(isPresented: $finishedRanking) {
                 SummaryView(songs: rankedSongs)
             }
@@ -61,13 +73,14 @@ struct ContentView: View {
                     song2 = selectedSongs.1
                 }
             }
+        }
     }
     
     func generateTwoSongs() -> (Song, Song) {
         var firstSong: Song
         var secondSong: Song
 
-        var repeatedScores = svm.findSongsWithSameScore(forRankedSongs: rankedSongs, comparedPairs: comparedPairs)
+        let repeatedScores = svm.findSongsWithSameScore(forRankedSongs: rankedSongs, comparedPairs: comparedPairs)
         if rankedSongs.count == 0 || repeatedScores == nil {
            let firstIndex = Int.random(in: 0..<songs.count)
            firstSong = songs.remove(at: firstIndex)
@@ -94,6 +107,17 @@ struct ContentView: View {
         }
         comparedPairs.insert(svm.getComparisonKey(forPreviousSong: songs[0], currentSong: songs[1]))
     }
+    
+//    func handleButtonBehaviour(forWinnerSong winnerSong: Song, loserSong: Song) {
+//        winnerSong.wins += 1
+//        loserSong.losses += 1
+//        addRankedSongs(songs: [winnerSong, loserSong])
+//        if songs.count == 0 {
+//            finishedRanking = true
+//        } else {
+//            (song1, song2) = generateTwoSongs()
+//        }
+//    }
 }
 
 struct ContentView_Previews: PreviewProvider {

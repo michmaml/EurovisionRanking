@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13EBF0EED62A4A4379F43DCB /* Pods_EurovisionRankingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A3B82901CEA19247FCC8B23 /* Pods_EurovisionRankingTests.framework */; };
 		296E4EA529ED5A3800B51CA3 /* EurovisionRankingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296E4EA429ED5A3800B51CA3 /* EurovisionRankingApp.swift */; };
 		296E4EA729ED5A3800B51CA3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296E4EA629ED5A3800B51CA3 /* ContentView.swift */; };
 		296E4EA929ED5A3900B51CA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 296E4EA829ED5A3900B51CA3 /* Assets.xcassets */; };
@@ -18,10 +19,10 @@
 		298BC9F02A33159900B98536 /* HeartFlagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298BC9EF2A33159900B98536 /* HeartFlagView.swift */; };
 		298BC9F22A3316FC00B98536 /* CountryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298BC9F12A3316FC00B98536 /* CountryView.swift */; };
 		298BC9FA2A331C1300B98536 /* EurovisionRankingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298BC9F92A331C1300B98536 /* EurovisionRankingTests.swift */; };
-		298BCA052A331C7D00B98536 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 298BCA042A331C7D00B98536 /* SnapshotTesting */; };
 		298BCA072A331CB500B98536 /* CountryViewSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298BCA062A331CB500B98536 /* CountryViewSnapshotTests.swift */; };
 		298BCA092A33661300B98536 /* HeartFlagViewSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298BCA082A33661300B98536 /* HeartFlagViewSnapshotTests.swift */; };
 		29CD8E182A3372DE009BD4C6 /* SongViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CD8E172A3372DE009BD4C6 /* SongViewModel.swift */; };
+		B337CBCA2DBE62CEF23F1020 /* Pods_EurovisionRanking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB93044A7FAAB9656DE3B3A6 /* Pods_EurovisionRanking.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		220F9C917610341E78EBCFE5 /* Pods-EurovisionRankingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EurovisionRankingTests.release.xcconfig"; path = "Target Support Files/Pods-EurovisionRankingTests/Pods-EurovisionRankingTests.release.xcconfig"; sourceTree = "<group>"; };
 		296E4EA129ED5A3800B51CA3 /* EurovisionRanking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EurovisionRanking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		296E4EA429ED5A3800B51CA3 /* EurovisionRankingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EurovisionRankingApp.swift; sourceTree = "<group>"; };
 		296E4EA629ED5A3800B51CA3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -51,6 +53,11 @@
 		298BCA062A331CB500B98536 /* CountryViewSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryViewSnapshotTests.swift; sourceTree = "<group>"; };
 		298BCA082A33661300B98536 /* HeartFlagViewSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartFlagViewSnapshotTests.swift; sourceTree = "<group>"; };
 		29CD8E172A3372DE009BD4C6 /* SongViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongViewModel.swift; sourceTree = "<group>"; };
+		2A3B82901CEA19247FCC8B23 /* Pods_EurovisionRankingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EurovisionRankingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		515597BC19C6BDC2D96EF1DC /* Pods-EurovisionRankingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EurovisionRankingTests.debug.xcconfig"; path = "Target Support Files/Pods-EurovisionRankingTests/Pods-EurovisionRankingTests.debug.xcconfig"; sourceTree = "<group>"; };
+		756EDBC94853F6E7351F5479 /* Pods-EurovisionRanking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EurovisionRanking.release.xcconfig"; path = "Target Support Files/Pods-EurovisionRanking/Pods-EurovisionRanking.release.xcconfig"; sourceTree = "<group>"; };
+		BB93044A7FAAB9656DE3B3A6 /* Pods_EurovisionRanking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EurovisionRanking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2EA1E4E1205FF7CD98A0574 /* Pods-EurovisionRanking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EurovisionRanking.debug.xcconfig"; path = "Target Support Files/Pods-EurovisionRanking/Pods-EurovisionRanking.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B337CBCA2DBE62CEF23F1020 /* Pods_EurovisionRanking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,19 +73,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				298BCA052A331C7D00B98536 /* SnapshotTesting in Frameworks */,
+				13EBF0EED62A4A4379F43DCB /* Pods_EurovisionRankingTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2403CC105C7F2CC14D5984D1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F2EA1E4E1205FF7CD98A0574 /* Pods-EurovisionRanking.debug.xcconfig */,
+				756EDBC94853F6E7351F5479 /* Pods-EurovisionRanking.release.xcconfig */,
+				515597BC19C6BDC2D96EF1DC /* Pods-EurovisionRankingTests.debug.xcconfig */,
+				220F9C917610341E78EBCFE5 /* Pods-EurovisionRankingTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		296E4E9829ED5A3800B51CA3 = {
 			isa = PBXGroup;
 			children = (
 				296E4EA329ED5A3800B51CA3 /* EurovisionRanking */,
 				298BC9F82A331C1300B98536 /* EurovisionRankingTests */,
 				296E4EA229ED5A3800B51CA3 /* Products */,
+				2403CC105C7F2CC14D5984D1 /* Pods */,
+				FE74D0110FB58FD52F2FA686 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -142,6 +164,15 @@
 			path = EurovisionRankingTests;
 			sourceTree = "<group>";
 		};
+		FE74D0110FB58FD52F2FA686 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BB93044A7FAAB9656DE3B3A6 /* Pods_EurovisionRanking.framework */,
+				2A3B82901CEA19247FCC8B23 /* Pods_EurovisionRankingTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -149,17 +180,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 296E4EAF29ED5A3900B51CA3 /* Build configuration list for PBXNativeTarget "EurovisionRanking" */;
 			buildPhases = (
+				3B7C3DEDC7556E5941C54636 /* [CP] Check Pods Manifest.lock */,
 				296E4E9D29ED5A3800B51CA3 /* Sources */,
 				296E4E9E29ED5A3800B51CA3 /* Frameworks */,
 				296E4E9F29ED5A3800B51CA3 /* Resources */,
+				2CDBFEA524B573D77B5866A9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = EurovisionRanking;
-			packageProductDependencies = (
-			);
 			productName = EurovisionRanking;
 			productReference = 296E4EA129ED5A3800B51CA3 /* EurovisionRanking.app */;
 			productType = "com.apple.product-type.application";
@@ -168,9 +199,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 298BC9FD2A331C1300B98536 /* Build configuration list for PBXNativeTarget "EurovisionRankingTests" */;
 			buildPhases = (
+				6B5E3C913D34DA56628034CD /* [CP] Check Pods Manifest.lock */,
 				298BC9F32A331C1300B98536 /* Sources */,
 				298BC9F42A331C1300B98536 /* Frameworks */,
 				298BC9F52A331C1300B98536 /* Resources */,
+				8E4A5E5A49DB28716BD60374 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -178,9 +211,6 @@
 				298BC9FC2A331C1300B98536 /* PBXTargetDependency */,
 			);
 			name = EurovisionRankingTests;
-			packageProductDependencies = (
-				298BCA042A331C7D00B98536 /* SnapshotTesting */,
-			);
 			productName = EurovisionRankingTests;
 			productReference = 298BC9F72A331C1300B98536 /* EurovisionRankingTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -213,9 +243,6 @@
 				Base,
 			);
 			mainGroup = 296E4E9829ED5A3800B51CA3;
-			packageReferences = (
-				298BCA032A331C7D00B98536 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
-			);
 			productRefGroup = 296E4EA229ED5A3800B51CA3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -244,6 +271,87 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2CDBFEA524B573D77B5866A9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EurovisionRanking/Pods-EurovisionRanking-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EurovisionRanking/Pods-EurovisionRanking-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EurovisionRanking/Pods-EurovisionRanking-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3B7C3DEDC7556E5941C54636 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EurovisionRanking-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6B5E3C913D34DA56628034CD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EurovisionRankingTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8E4A5E5A49DB28716BD60374 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EurovisionRankingTests/Pods-EurovisionRankingTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EurovisionRankingTests/Pods-EurovisionRankingTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EurovisionRankingTests/Pods-EurovisionRankingTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		296E4E9D29ED5A3800B51CA3 /* Sources */ = {
@@ -399,6 +507,7 @@
 		};
 		296E4EB029ED5A3900B51CA3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2EA1E4E1205FF7CD98A0574 /* Pods-EurovisionRanking.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -427,6 +536,7 @@
 		};
 		296E4EB129ED5A3900B51CA3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 756EDBC94853F6E7351F5479 /* Pods-EurovisionRanking.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -455,6 +565,7 @@
 		};
 		298BC9FE2A331C1300B98536 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 515597BC19C6BDC2D96EF1DC /* Pods-EurovisionRankingTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -472,6 +583,7 @@
 		};
 		298BC9FF2A331C1300B98536 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 220F9C917610341E78EBCFE5 /* Pods-EurovisionRankingTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -518,25 +630,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		298BCA032A331C7D00B98536 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/pointfreeco/swift-snapshot-testing";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		298BCA042A331C7D00B98536 /* SnapshotTesting */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 298BCA032A331C7D00B98536 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
-			productName = SnapshotTesting;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 296E4E9929ED5A3800B51CA3 /* Project object */;
 }

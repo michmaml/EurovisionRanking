@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Backpack_SwiftUI
 
 struct CountryView: View {
     @Environment(\.dynamicTypeSize) var dynamicTypeSize
@@ -19,10 +20,8 @@ struct CountryView: View {
                 HeartFlagView(countryName: song.country.lowercased())
                 
                 VStack(alignment: .leading) {
-                    Text(song.artist)
-                        .font(.headline)
-                    Text(song.title)
-                        .font(.subheadline)
+                    BPKText(song.artist, style: .footnote)
+                    BPKText(song.title, style: .heading4)
                 }
                 
                 Spacer()

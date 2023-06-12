@@ -24,7 +24,7 @@ struct ContentView: View {
                 BPKCard {
                     VStack {
                         SongView(song: song1)
-                        Button {
+                        BPKButton("Choose", action: {
                             song1.wins += 1
                             song2.losses += 1
                             addRankedSongs(songs: [song1, song2])
@@ -33,9 +33,7 @@ struct ContentView: View {
                             } else {
                                 (song1, song2) = generateTwoSongs()
                             }
-                        } label: {
-                            Text("Choose")
-                        }.buttonStyle(.bordered)
+                        })
                     }
                 }
                 
@@ -45,7 +43,7 @@ struct ContentView: View {
                 BPKCard {
                     VStack {
                         SongView(song: song2)
-                        Button {
+                        BPKButton("Choose", action: {
                             song2.wins += 1
                             song1.losses += 1
                             addRankedSongs(songs: [song1, song2])
@@ -54,9 +52,7 @@ struct ContentView: View {
                             } else {
                                 (song1, song2) = generateTwoSongs()
                             }
-                        } label: {
-                            Text("Choose")
-                        }.buttonStyle(.bordered)
+                        })
                     }
                 }
             }

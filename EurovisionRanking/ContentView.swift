@@ -9,7 +9,9 @@ import SwiftUI
 import Backpack_SwiftUI
 
 struct ContentView: View {
-    @State var songs = Song.data
+    let network = Network()
+    @State var baseSongs = [Network.BaseSong]()
+    @State var songs = [Song]()
     @State var rankedSongs: [Song] = []
     @State var comparedPairs: Set<String> = []
     @State private var song1: Song = Song(country: "", artist: "", title: "", videoID: "", wins: 0, losses: 0)
@@ -36,10 +38,10 @@ struct ContentView: View {
                         })
                     }
                 }
-                
+
                 Spacer()
                 Spacer()
-                
+
                 BPKCard {
                     VStack {
                         SongView(song: song2)
@@ -69,6 +71,20 @@ struct ContentView: View {
                     song2 = selectedSongs.1
                 }
             }
+        }
+        .task {
+            do {
+                baseSongs = try await network.getAllSongs()
+                mapBaseSongsToSongs()
+            } catch {
+                print("Error", error)
+            }
+        }
+    }
+    
+    func mapBaseSongsToSongs() {
+        songs = baseSongs.map {
+            Song(country: $0.countryName, artist: $0.artistName, title: $0.songName, videoID: $0.videoId, wins: 0, losses: 0)
         }
     }
     

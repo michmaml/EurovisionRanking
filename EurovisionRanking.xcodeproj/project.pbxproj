@@ -130,8 +130,8 @@
 				296E4EB229ED680200B51CA3 /* VideoView.swift */,
 				296E4EBB29EEB0E000B51CA3 /* SummaryView.swift */,
 				296E4EA829ED5A3900B51CA3 /* Assets.xcassets */,
-				296E4EAA29ED5A3900B51CA3 /* Preview Content */,
 				29A02CD02A37403700707244 /* Network.swift */,
+				296E4EAA29ED5A3900B51CA3 /* Preview Content */,
 			);
 			path = EurovisionRanking;
 			sourceTree = "<group>";

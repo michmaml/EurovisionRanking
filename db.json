@@ -50,11 +50,11 @@
         },
         {
             "id": 7,
-            "country_name": "Chechia",
+            "country_name": "Czechia",
             "artist_name": "Vesna",
             "song_name": "My Sister's Crown",
             "video_id": "-y78qgDlzAM",
-            "flag_url": "https://raw.githubusercontent.com/gert-janvercauteren/mockapi/main/flags/esc_chechia_rgb-heart.png"
+            "flag_url": "https://raw.githubusercontent.com/gert-janvercauteren/mockapi/main/flags/esc_czechia_rgb-heart.png"
         },
         {
             "id": 8,

@@ -24,6 +24,7 @@
 		29A02CCD2A3722A800707244 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A02CCC2A3722A800707244 /* CardView.swift */; };
 		29A02CCF2A37381200707244 /* SongViewSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A02CCE2A37381200707244 /* SongViewSnapshotTests.swift */; };
 		29A02CD12A37403700707244 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A02CD02A37403700707244 /* Network.swift */; };
+		29A02CD52A38B0EB00707244 /* CardLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A02CD42A38B0EB00707244 /* CardLoadingView.swift */; };
 		29CD8E182A3372DE009BD4C6 /* SongViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CD8E172A3372DE009BD4C6 /* SongViewModel.swift */; };
 		B337CBCA2DBE62CEF23F1020 /* Pods_EurovisionRanking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB93044A7FAAB9656DE3B3A6 /* Pods_EurovisionRanking.framework */; };
 /* End PBXBuildFile section */
@@ -58,6 +59,7 @@
 		29A02CCC2A3722A800707244 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		29A02CCE2A37381200707244 /* SongViewSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongViewSnapshotTests.swift; sourceTree = "<group>"; };
 		29A02CD02A37403700707244 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		29A02CD42A38B0EB00707244 /* CardLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardLoadingView.swift; sourceTree = "<group>"; };
 		29CD8E172A3372DE009BD4C6 /* SongViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongViewModel.swift; sourceTree = "<group>"; };
 		2A3B82901CEA19247FCC8B23 /* Pods_EurovisionRankingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EurovisionRankingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		515597BC19C6BDC2D96EF1DC /* Pods-EurovisionRankingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EurovisionRankingTests.debug.xcconfig"; path = "Target Support Files/Pods-EurovisionRankingTests/Pods-EurovisionRankingTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				29CD8E172A3372DE009BD4C6 /* SongViewModel.swift */,
 				296E4EA629ED5A3800B51CA3 /* ContentView.swift */,
 				29A02CCC2A3722A800707244 /* CardView.swift */,
+				29A02CD42A38B0EB00707244 /* CardLoadingView.swift */,
 				296E4EB729ED71B600B51CA3 /* SongView.swift */,
 				296E4EB229ED680200B51CA3 /* VideoView.swift */,
 				296E4EBB29EEB0E000B51CA3 /* SummaryView.swift */,
@@ -377,6 +380,7 @@
 				296E4EA529ED5A3800B51CA3 /* EurovisionRankingApp.swift in Sources */,
 				29CD8E182A3372DE009BD4C6 /* SongViewModel.swift in Sources */,
 				296E4EBC29EEB0E000B51CA3 /* SummaryView.swift in Sources */,
+				29A02CD52A38B0EB00707244 /* CardLoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

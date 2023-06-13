@@ -25,17 +25,21 @@ struct ContentView: View {
             VStack {
                 BPKCard {
                     VStack {
-                        SongView(song: song1)
-                        BPKButton("Choose", action: {
-                            song1.wins += 1
-                            song2.losses += 1
-                            addRankedSongs(songs: [song1, song2])
-                            if songs.count == 0 {
-                                finishedRanking = true
-                            } else {
-                                (song1, song2) = generateTwoSongs()
-                            }
-                        })
+                        if songs.count != 0 {
+                            SongView(song: song1)
+                            BPKButton("Choose", action: {
+                                song1.wins += 1
+                                song2.losses += 1
+                                addRankedSongs(songs: [song1, song2])
+                                if songs.count == 0 {
+                                    finishedRanking = true
+                                } else {
+                                    (song1, song2) = generateTwoSongs()
+                                }
+                            })
+                        } else {
+                            CardLoadingView()
+                        }
                     }
                 }
 
@@ -44,17 +48,21 @@ struct ContentView: View {
 
                 BPKCard {
                     VStack {
-                        SongView(song: song2)
-                        BPKButton("Choose", action: {
-                            song2.wins += 1
-                            song1.losses += 1
-                            addRankedSongs(songs: [song1, song2])
-                            if songs.count == 0 {
-                                finishedRanking = true
-                            } else {
-                                (song1, song2) = generateTwoSongs()
-                            }
-                        })
+                        if songs.count != 0 {
+                            SongView(song: song2)
+                            BPKButton("Choose", action: {
+                                song2.wins += 1
+                                song1.losses += 1
+                                addRankedSongs(songs: [song1, song2])
+                                if songs.count == 0 {
+                                    finishedRanking = true
+                                } else {
+                                    (song1, song2) = generateTwoSongs()
+                                }
+                            })
+                        } else {
+                            CardLoadingView()
+                        }
                     }
                 }
             }

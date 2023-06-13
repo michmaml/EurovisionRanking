@@ -6,22 +6,23 @@
 //
 
 import SwiftUI
+import Backpack_SwiftUI
 
-struct CardView: View {
-    let song: Song
-    var buttonAction: () -> Void
-    var body: some View {
-        SongView(song: song)
-        Button {
-            self.buttonAction()
-        } label: {
-            Text("Choose")
-        }.buttonStyle(.bordered)
-    }
-}
-
-struct CardView_Previews: PreviewProvider {
-    static var previews: some View {
-        SongView(song: Song.data.randomElement()!)
-    }
-}
+//struct CardView: View {
+//    let song: Song
+//    let buttonAction: () -> Void
+//    var body: some View {
+//        BPKCard {
+//            VStack {
+//                SongView(song: song)
+//                BPKButton("Choose", action: buttonAction)
+//            }
+//        }
+//    }
+//}
+//
+//struct CardView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        SongView(song: )
+//    }
+//}

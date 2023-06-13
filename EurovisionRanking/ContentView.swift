@@ -62,7 +62,11 @@ struct ContentView: View {
             .sheet(isPresented: $finishedRanking) {
                 SummaryView(songs: rankedSongs)
             }
-            .onAppear {
+        }
+        .task {
+            do {
+                baseSongs = try await network.getAllSongs()
+                mapBaseSongsToSongs()
                 if songs.count == 0 {
                     finishedRanking = true
                 } else {
@@ -70,12 +74,6 @@ struct ContentView: View {
                     song1 = selectedSongs.0
                     song2 = selectedSongs.1
                 }
-            }
-        }
-        .task {
-            do {
-                baseSongs = try await network.getAllSongs()
-                mapBaseSongsToSongs()
             } catch {
                 print("Error", error)
             }

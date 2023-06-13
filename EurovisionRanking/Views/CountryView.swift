@@ -32,7 +32,8 @@ struct CountryView: View {
 }
 
 struct CountryView_Previews: PreviewProvider {
+    static var song = Song(country: "Poland", artist: "Michał Szpak", title: "Color of your life", videoID: "kTsruf7hQXI", wins: 0, losses: 0)
     static var previews: some View {
-        CountryView(song: Song.data.randomElement()!)
+        CountryView(song: song)
     }
 }

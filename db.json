@@ -28,8 +28,8 @@
             "id": 4,
             "country_name": "Austria",
             "artist_name": "Teya & Salena",
-            "song_name": "[PLACEHOLDER]",
-            "video_id": "[PLACEHOLDER]",
+            "song_name": "Who The Hell Is Edgar?",
+            "video_id": "ZMmLeV47Au4",
             "flag_url": "https://raw.githubusercontent.com/gert-janvercauteren/mockapi/main/flags/esc_austria_rgb-heart.png"
         },
         {
@@ -52,8 +52,8 @@
             "id": 7,
             "country_name": "Chechia",
             "artist_name": "Vesna",
-            "song_name": "[PLACEHOLDER]",
-            "video_id": "[PLACEHOLDER]",
+            "song_name": "My Sister's Crown",
+            "video_id": "-y78qgDlzAM",
             "flag_url": "https://raw.githubusercontent.com/gert-janvercauteren/mockapi/main/flags/esc_chechia_rgb-heart.png"
         },
         {

@@ -8,6 +8,22 @@
 import Foundation
 
 struct SongViewModel {
+    func addRankedSongs(
+        forRankedSongs rankedSongs: inout [Song], newlyRankedSongs: [Song], comparedPairs: inout Set<String>) -> Void {
+        newlyRankedSongs.forEach { song in
+            if let index = rankedSongs.firstIndex(where: { $0.videoID == song.videoID }) {
+                rankedSongs[index] = song
+            } else {
+                let index = rankedSongs.firstIndex(where: {
+                    $0.wins + $0.losses >= song.wins + song.losses
+                }) ?? rankedSongs.endIndex
+                rankedSongs.insert(song, at: index)
+            }
+        }
+        comparedPairs.insert(
+            getComparisonKey(forPreviousSong: newlyRankedSongs[0], currentSong: newlyRankedSongs[1]))
+    }
+    
     func findSongsWithSameScore(forRankedSongs rankedSongs: [Song], comparedPairs: Set<String>) -> (Song, Song)? {
         var scores: Set<Int> = []
         for song in rankedSongs {

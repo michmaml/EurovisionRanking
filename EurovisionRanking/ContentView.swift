@@ -28,14 +28,7 @@ struct ContentView: View {
                         if songs.count != 0 {
                             SongView(song: song1)
                             BPKButton("Choose", action: {
-                                song1.wins += 1
-                                song2.losses += 1
-                                addRankedSongs(songs: [song1, song2])
-                                if songs.count == 0 {
-                                    finishedRanking = true
-                                } else {
-                                    (song1, song2) = generateTwoSongs()
-                                }
+                                handleButtonBehaviour(forWinnerSong: &song1, loserSong: &song2)
                             })
                         } else {
                             CardLoadingView()
@@ -51,14 +44,7 @@ struct ContentView: View {
                         if songs.count != 0 {
                             SongView(song: song2)
                             BPKButton("Choose", action: {
-                                song2.wins += 1
-                                song1.losses += 1
-                                addRankedSongs(songs: [song1, song2])
-                                if songs.count == 0 {
-                                    finishedRanking = true
-                                } else {
-                                    (song1, song2) = generateTwoSongs()
-                                }
+                                handleButtonBehaviour(forWinnerSong: &song2, loserSong: &song1)
                             })
                         } else {
                             CardLoadingView()
@@ -126,16 +112,17 @@ struct ContentView: View {
         comparedPairs.insert(svm.getComparisonKey(forPreviousSong: songs[0], currentSong: songs[1]))
     }
     
-//    func handleButtonBehaviour(forWinnerSong winnerSong: Song, loserSong: Song) {
-//        winnerSong.wins += 1
-//        loserSong.losses += 1
-//        addRankedSongs(songs: [winnerSong, loserSong])
-//        if songs.count == 0 {
-//            finishedRanking = true
-//        } else {
-//            (song1, song2) = generateTwoSongs()
-//        }
-//    }
+    func handleButtonBehaviour(
+        forWinnerSong winnerSong: inout Song, loserSong: inout Song) {
+        winnerSong.wins += 1
+        loserSong.losses += 1
+        addRankedSongs(songs: [song1, song2])
+        if songs.count == 0 {
+            finishedRanking = true
+        } else {
+            (song1, song2) = generateTwoSongs()
+        }
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {

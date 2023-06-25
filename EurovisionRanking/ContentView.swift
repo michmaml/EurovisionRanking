@@ -29,6 +29,7 @@ struct ContentView: View {
                 //SummaryView(songs: rankedSongs)
             }
             .onAppear { // <- change to onload
+                viewModel.loadSongs()
                 // load data from api, viewModel.onAppStart()
                 // ^ this will trigger the loading state
                 // ^^ add loading screen

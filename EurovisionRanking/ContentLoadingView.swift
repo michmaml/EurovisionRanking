@@ -9,8 +9,8 @@ import SwiftUI
 import Backpack_SwiftUI
 
 struct ContentLoadingView: View {
-    @State private var dataLoaded = false
-    @State private var xyz = 1.0
+    @StateObject private var viewModel = ViewModel()
+    @State private var imageScale = 1.0
     @State private var fadeOut = false
     private var imageView: some View =
         Image("EUROVISION_SPLASH")
@@ -20,37 +20,34 @@ struct ContentLoadingView: View {
     
     var body: some View {
         VStack {
-            if !dataLoaded {
+            if !viewModel.songsLoaded {
                 imageView
-                    .scaleEffect(xyz)
+                    .scaleEffect(imageScale)
                     .animation(
                         .easeInOut(duration: 0.8)
                             .repeatForever(autoreverses: true),
-                        value: xyz
+                        value: imageScale
                     )
             } else {
                 imageView
-                    .scaleEffect(xyz)
+                    .scaleEffect(imageScale)
                     .animation(
                         .easeInOut(duration: 0.5),
-                        value: xyz
+                        value: imageScale
                     )
-            }
-            Button("1111") {
-                dataLoaded = true
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(BPKColor.corePrimaryColor)
         .ignoresSafeArea()
         .onAppear {
-            xyz *= 1.2
+            imageScale *= 1.2
         }
-        .onChange(of: dataLoaded) { _ in
+        .onChange(of: viewModel.songsLoaded) { _ in
             withAnimation(
                 Animation.easeInOut(duration: 0.7), {
                     fadeOut = true
-                    xyz *= 10
+                    imageScale *= 10
                 })
         }
         .opacity(fadeOut ? 0 : 1)

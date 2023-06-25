@@ -34,6 +34,7 @@ struct ContentView: View {
                 // ^^ add loading screen
                 viewModel.startRanking()
             }
+            ContentLoadingView()
         }
     }
 }

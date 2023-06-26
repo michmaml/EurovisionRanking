@@ -10,7 +10,12 @@ import SwiftUI
 @MainActor class ViewModel: ObservableObject {
     @Published private(set) var activeSongs = [Song]()
     @Published var finishedRanking = false
+    
+    // MARK: - Loading
     @Published var songsLoaded = false
+    @Published var animationPulseLength = 0.8
+    @Published var fadeOut = false
+    @Published var imageScale = 1.0
     
     private let maxActiveSongs = 2
     @Published var allSongs: [Song] = []

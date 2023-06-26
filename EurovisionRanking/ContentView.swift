@@ -37,9 +37,16 @@ struct ContentView: View {
                 // load data from api, viewModel.onAppStart()
                 // ^ this will trigger the loading state
                 // ^^ add loading screen
-                
             }
-            //ContentLoadingView()
+            ContentLoadingView()
+                .onChange(of: viewModel.songsLoaded) { _ in
+                    withAnimation(
+                        Animation.easeInOut(duration: 0.7), {
+                            viewModel.fadeOut = true
+                            //viewModel.imageScale *= 10
+                        })
+                }
+                .opacity(viewModel.fadeOut ? 0 : 1)
         }
     }
 }

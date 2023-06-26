@@ -10,8 +10,6 @@ import Backpack_SwiftUI
 
 struct ContentLoadingView: View {
     @StateObject private var viewModel = ViewModel()
-    @State private var imageScale = 1.0
-    @State private var fadeOut = false
     private var imageView: some View =
         Image("EUROVISION_SPLASH")
             .resizable()
@@ -22,37 +20,27 @@ struct ContentLoadingView: View {
         VStack {
             if !viewModel.songsLoaded {
                 imageView
-                    .scaleEffect(imageScale)
+                    .scaleEffect(viewModel.imageScale)
                     .animation(
-                        .easeInOut(duration: 0.8)
+                        .easeInOut(duration: viewModel.animationPulseLength)
                             .repeatForever(autoreverses: true),
-                        value: imageScale
+                        value: viewModel.imageScale
                     )
             } else {
                 imageView
-                    .scaleEffect(imageScale)
+                    .scaleEffect(viewModel.imageScale)
                     .animation(
                         .easeInOut(duration: 0.5),
-                        value: imageScale
+                        value: viewModel.imageScale
                     )
-            }
-            Button("\(viewModel.songsLoaded ? "Start" : "Loading")") {
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(BPKColor.corePrimaryColor)
         .ignoresSafeArea()
         .onAppear {
-            imageScale *= 1.2
+            viewModel.imageScale *= 1.2
         }
-        .onChange(of: viewModel.songsLoaded) { _ in
-            withAnimation(
-                Animation.easeInOut(duration: 0.7), {
-                    fadeOut = true
-                    imageScale *= 10
-                })
-        }
-        .opacity(fadeOut ? 0 : 1)
     }
 }
 

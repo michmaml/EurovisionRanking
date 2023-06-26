@@ -28,14 +28,18 @@ struct ContentView: View {
             .sheet(isPresented: $viewModel.finishedRanking) {
                 //SummaryView(songs: rankedSongs)
             }
+            .task {
+                await viewModel.loadSongs()
+                viewModel.startRanking()
+            }
             .onAppear { // <- change to onload
-                viewModel.loadSongs()
+                //viewModel.loadSongs()
                 // load data from api, viewModel.onAppStart()
                 // ^ this will trigger the loading state
                 // ^^ add loading screen
-                viewModel.startRanking()
+                
             }
-            ContentLoadingView()
+            //ContentLoadingView()
         }
     }
 }

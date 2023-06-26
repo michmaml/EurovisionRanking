@@ -36,6 +36,8 @@ struct ContentLoadingView: View {
                         value: imageScale
                     )
             }
+            Button("\(viewModel.songsLoaded ? "Start" : "Loading")") {
+            }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(BPKColor.corePrimaryColor)

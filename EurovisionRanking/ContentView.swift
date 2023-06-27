@@ -3,7 +3,7 @@ import Backpack_SwiftUI
 
 struct ContentView: View {
     @StateObject private var viewModel = ViewModel()
-    @State var showSplash = true
+    @State private var showSplash = true
     
     var body: some View {
         ZStack {
@@ -23,14 +23,16 @@ struct ContentView: View {
             .sheet(isPresented: $viewModel.finishedRanking) {
                 //SummaryView(songs: rankedSongs)
             }
-            ContentLoadingView()
+            ContentLoadingView(loading: $showSplash)
                 .opacity(showSplash ? 1 : 0)
                 .task {
                     await viewModel.loadSongs()
                     viewModel.startRanking()
                     
-                    withAnimation {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                      withAnimation() {
                         self.showSplash = false
+                      }
                     }
                 }
         }

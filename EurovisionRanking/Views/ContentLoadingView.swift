@@ -1,15 +1,17 @@
-//
-//  ContentLoadingView.swift
-//  EurovisionRanking
-//
-//  Created by Michal Sekulski on 23/06/2023.
-//
-
 import SwiftUI
 import Backpack_SwiftUI
 
 struct ContentLoadingView: View {
-    @StateObject private var viewModel = ViewModel()
+    private let animationPulseLength = 0.8
+    private let fadeOut = false
+    @State private var imageScale = 1.0
+    
+    @Binding private var loading: Bool
+    
+    init(loading: Binding<Bool>) {
+        self._loading = loading
+    }
+    
     private var imageView: some View =
         Image("EUROVISION_SPLASH")
             .resizable()
@@ -18,34 +20,25 @@ struct ContentLoadingView: View {
     
     var body: some View {
         VStack {
-            if !viewModel.songsLoaded {
-                imageView
-                    .scaleEffect(viewModel.imageScale)
-                    .animation(
-                        .easeInOut(duration: viewModel.animationPulseLength)
-                            .repeatForever(autoreverses: true),
-                        value: viewModel.imageScale
-                    )
-            } else {
-                imageView
-                    .scaleEffect(viewModel.imageScale)
-                    .animation(
-                        .easeInOut(duration: 0.5),
-                        value: viewModel.imageScale
-                    )
-            }
+            imageView
+                .scaleEffect(loading ? imageScale : imageScale * 5)
+                .animation(
+                    .easeInOut(duration: animationPulseLength)
+                        .repeatForever(autoreverses: true),
+                    value: imageScale
+                )
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(BPKColor.corePrimaryColor)
         .ignoresSafeArea()
         .onAppear {
-            viewModel.imageScale *= 1.2
+            imageScale *= 1.2
         }
     }
 }
 
 struct ContentLoadingView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentLoadingView()
+        ContentLoadingView(loading: .constant(false))
     }
 }

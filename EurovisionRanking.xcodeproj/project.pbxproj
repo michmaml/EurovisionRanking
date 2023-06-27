@@ -126,18 +126,13 @@
 		296E4EA329ED5A3800B51CA3 /* EurovisionRanking */ = {
 			isa = PBXGroup;
 			children = (
+				79EE5EB82A4A819800194ED3 /* Screens */,
 				298BC9EE2A33157000B98536 /* Views */,
 				296E4EB429ED6BAD00B51CA3 /* Models */,
 				296E4EA429ED5A3800B51CA3 /* EurovisionRankingApp.swift */,
 				29CD8E172A3372DE009BD4C6 /* SongViewModel.swift */,
 				296E4EA629ED5A3800B51CA3 /* ContentView.swift */,
-				29BC3B022A45E33500568446 /* ContentLoadingView.swift */,
 				29A23F872A42F80000378536 /* ViewModel.swift */,
-				29A02CCC2A3722A800707244 /* CardView.swift */,
-				29A02CD42A38B0EB00707244 /* CardLoadingView.swift */,
-				296E4EB729ED71B600B51CA3 /* SongView.swift */,
-				296E4EB229ED680200B51CA3 /* VideoView.swift */,
-				296E4EBB29EEB0E000B51CA3 /* SummaryView.swift */,
 				296E4EA829ED5A3900B51CA3 /* Assets.xcassets */,
 				29A02CD02A37403700707244 /* Network.swift */,
 				296E4EAA29ED5A3900B51CA3 /* Preview Content */,
@@ -164,6 +159,11 @@
 		298BC9EE2A33157000B98536 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				29BC3B022A45E33500568446 /* ContentLoadingView.swift */,
+				296E4EB229ED680200B51CA3 /* VideoView.swift */,
+				296E4EB729ED71B600B51CA3 /* SongView.swift */,
+				29A02CD42A38B0EB00707244 /* CardLoadingView.swift */,
+				29A02CCC2A3722A800707244 /* CardView.swift */,
 				298BC9EF2A33159900B98536 /* HeartFlagView.swift */,
 				298BC9F12A3316FC00B98536 /* CountryView.swift */,
 			);
@@ -179,6 +179,14 @@
 				298BCA082A33661300B98536 /* HeartFlagViewSnapshotTests.swift */,
 			);
 			path = EurovisionRankingTests;
+			sourceTree = "<group>";
+		};
+		79EE5EB82A4A819800194ED3 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				296E4EBB29EEB0E000B51CA3 /* SummaryView.swift */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 		FE74D0110FB58FD52F2FA686 /* Frameworks */ = {

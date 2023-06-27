@@ -1,15 +1,10 @@
-//
-//  ContentView.swift
-//  EurovisionRanking
-//
-//  Created by Michal Sekulski on 17/04/2023.
-//
-
 import SwiftUI
 import Backpack_SwiftUI
 
 struct ContentView: View {
     @StateObject private var viewModel = ViewModel()
+    @State var showSplash = true
+    
     var body: some View {
         ZStack {
             Color(BPKColor.canvasColor).ignoresSafeArea()
@@ -28,25 +23,16 @@ struct ContentView: View {
             .sheet(isPresented: $viewModel.finishedRanking) {
                 //SummaryView(songs: rankedSongs)
             }
-            .task {
-                await viewModel.loadSongs()
-                viewModel.startRanking()
-            }
-            .onAppear { // <- change to onload
-                //viewModel.loadSongs()
-                // load data from api, viewModel.onAppStart()
-                // ^ this will trigger the loading state
-                // ^^ add loading screen
-            }
             ContentLoadingView()
-                .onChange(of: viewModel.songsLoaded) { _ in
-                    withAnimation(
-                        Animation.easeInOut(duration: 0.7), {
-                            viewModel.fadeOut = true
-                            //viewModel.imageScale *= 10
-                        })
+                .opacity(showSplash ? 1 : 0)
+                .task {
+                    await viewModel.loadSongs()
+                    viewModel.startRanking()
+                    
+                    withAnimation {
+                        self.showSplash = false
+                    }
                 }
-                .opacity(viewModel.fadeOut ? 0 : 1)
         }
     }
 }

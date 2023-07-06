@@ -7,7 +7,7 @@ struct ContentView: View {
     
     var body: some View {
         ZStack {
-            Color(BPKColor.canvasColor).ignoresSafeArea()
+            //Color(BPKColor.canvasColor).ignoresSafeArea()
             VStack {
                 ForEach(viewModel.activeSongs) { song in
                     BPKCard {
@@ -15,19 +15,20 @@ struct ContentView: View {
                             SongView(song: song)
                         }
                     }.onTapGesture {
-                        viewModel.selectWinner(for: song)
+                        //viewModel.selectWinner(for: song)
                     }
                 }
             }
             .padding()
             .sheet(isPresented: $viewModel.finishedRanking) {
-                //SummaryView(songs: rankedSongs)
+                SummaryView(songs: viewModel.rankedSongs)
             }
+            
             ContentLoadingView(loading: $showSplash)
                 .opacity(showSplash ? 1 : 0)
                 .task {
                     await viewModel.loadSongs()
-                    viewModel.startRanking()
+                    viewModel.generateSongs()
                     
                     DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                       withAnimation() {

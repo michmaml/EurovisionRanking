@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SongView: View {
     let song: Song
+    let network = Network()
     var body: some View {
         VStack {
             CountryView(song: song)
@@ -20,7 +21,7 @@ struct SongView: View {
 }
 
 struct SongView_Previews: PreviewProvider {
-    static var song = Song.data.randomElement()!
+    static var song = Song(country: "", artist: "", title: "", videoID: "", wins: 0, losses: 0)
     static var previews: some View {
         SongView(song: song)
     }

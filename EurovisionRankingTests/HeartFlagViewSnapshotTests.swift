@@ -60,7 +60,7 @@ final class HeartFlagViewSnapshotTests: XCTestCase {
         // When
         let heartFlagView = HeartFlagView(countryName: countryName.lowercased())
         let view: UIView = UIHostingController(rootView: heartFlagView).view
-        view.semanticContentAttribute = .forceRightToLeft
-        assertSnapshot(matching: view, as: .image(size: view.intrinsicContentSize))
+        assertSnapshot(matching: view, as: .image(size: view.intrinsicContentSize,
+                                                 traits: .init(layoutDirection: .rightToLeft)))
     }
 }

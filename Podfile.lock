@@ -1,0 +1,24 @@
+PODS:
+  - Backpack-Common (62.7.0)
+  - Backpack-SwiftUI (62.7.0):
+    - Backpack-Common
+  - SnapshotTesting (1.8.2)
+
+DEPENDENCIES:
+  - Backpack-SwiftUI
+  - SnapshotTesting (~> 1.8.1)
+
+SPEC REPOS:
+  trunk:
+    - Backpack-Common
+    - Backpack-SwiftUI
+    - SnapshotTesting
+
+SPEC CHECKSUMS:
+  Backpack-Common: 54f138f18a0eb86f770b6503e1c58e38745b4689
+  Backpack-SwiftUI: 1a1ee36359c1efda4bb437f638ead2078db3a682
+  SnapshotTesting: 38947050d13960d57a4a9c166fcf51bca7d56970
+
+PODFILE CHECKSUM: 12b4a71813e440c1badec62b3d42f6f4af48d371
+
+COCOAPODS: 1.12.1

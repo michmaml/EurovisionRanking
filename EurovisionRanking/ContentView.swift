@@ -15,7 +15,7 @@ struct ContentView: View {
                             SongView(song: song)
                         }
                     }.onTapGesture {
-                        //viewModel.selectWinner(for: song)
+                        $viewModel.selectWinner(for: song)
                     }
                 }
             }

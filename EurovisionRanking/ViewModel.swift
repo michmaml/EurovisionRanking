@@ -36,7 +36,7 @@ import SwiftUI
         }
     }
     
-    func generateSongs() -> [Song] {
+    func generateSongs() -> Void {
         //var songsToCompare: [Song]
         var firstSong: Song
         var secondSong: Song
@@ -52,17 +52,18 @@ import SwiftUI
            secondSong = repeatedScores!.1
         }
         
-        return [firstSong, secondSong]
+        activeSongs = [firstSong, secondSong]
     }
     
-    func handleButtonBehaviour(forWinnerSong winnerSong: Song, loserSong: Song) {
+    func selectWinner(for winnerSong: Song) {
+        
         winnerSong.wins += 1
         loserSong.losses += 1
         addRankedSongs(songs: activeSongs)
         if allSongs.count == 0 {
             finishedRanking = true
         } else {
-            activeSongs = generateSongs()
+            generateSongs()
         }
     }
     

@@ -8,22 +8,15 @@
 import SwiftUI
 
 @MainActor class ViewModel: ObservableObject {
+    private let maxActiveSongs = 2
     @Published private(set) var activeSongs = [Song]()
+    @Published var allSongs: [Song] = []
+    
     @Published var finishedRanking = false
     @Published var rankedSongs = [Song]()
     private var comparedPairs = Set<String>()
     
-    // MARK: - Loading
-    @Published var songsLoaded = false
-
-    
-    private let maxActiveSongs = 2
-    @Published var allSongs: [Song] = []
-    
-    private func generateActiveSongs() -> [Song] {
-        return [allSongs.randomElement()!, allSongs.randomElement()!]
-    }
-    
+    // MARK: Functions
     func loadSongs() async {
         do {
             sleep(1)
@@ -56,6 +49,8 @@ import SwiftUI
     }
     
     func selectWinner(for winnerSong: Song) {
+        // assumes there are only 2 songs
+        let loserSong = activeSongs.first(where: { $0.videoID != winnerSong.videoID })!
         
         winnerSong.wins += 1
         loserSong.losses += 1
@@ -80,22 +75,6 @@ import SwiftUI
         }
         comparedPairs.insert(getComparisonKey(forPreviousSong: songs[0], currentSong: songs[1]))
     }
-    
-//    func addRankedSongs(
-//        forRankedSongs rankedSongs: [Song], newlyRankedSongs: [Song], comparedPairs: Set<String>) -> Void {
-//        newlyRankedSongs.forEach { song in
-//            if let index = rankedSongs.firstIndex(where: { $0.videoID == song.videoID }) {
-//                rankedSongs[index] = song
-//            } else {
-//                let index = rankedSongs.firstIndex(where: {
-//                    $0.wins + $0.losses >= song.wins + song.losses
-//                }) ?? rankedSongs.endIndex
-//                rankedSongs.insert(song, at: index)
-//            }
-//        }
-//        comparedPairs.insert(
-//            getComparisonKey(forPreviousSong: newlyRankedSongs[0], currentSong: newlyRankedSongs[1]))
-//    }
     
     func findSongsWithSameScore(forRankedSongs rankedSongs: [Song], comparedPairs: Set<String>) -> (Song, Song)? {
         var scores: Set<Int> = []

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Song: Identifiable, Decodable {
+class Song: Identifiable, Decodable {
     var id = UUID()
     let country: String
     
@@ -17,6 +17,15 @@ struct Song: Identifiable, Decodable {
     
     var wins: Int
     var losses: Int
+    
+    init(country: String, artist: String, title: String, videoID: String, wins: Int, losses: Int) {
+        self.country = country
+        self.artist = artist
+        self.title = title
+        self.videoID = videoID
+        self.wins = wins
+        self.losses = losses
+    }
 }
 
 extension Song {

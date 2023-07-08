@@ -10,13 +10,12 @@ struct ContentView: View {
             //Color(BPKColor.canvasColor).ignoresSafeArea()
             VStack {
                 ForEach(viewModel.activeSongs) { song in
-                    BPKCard {
-                        VStack {
-                            SongView(song: song)
-                        }
-                    }.onTapGesture {
+                    SongView(song: song)
+                    Button {
                         viewModel.selectWinner(for: song)
-                    }
+                    } label: {
+                        Text("Choose")
+                    }.buttonStyle(.bordered)
                 }
             }
             .padding()

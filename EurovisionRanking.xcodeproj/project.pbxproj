@@ -266,13 +266,13 @@
 			isa = PBXGroup;
 			children = (
 				29BC3B022A45E33500568446 /* ContentLoadingView.swift */,
+				298BC9F12A3316FC00B98536 /* CountryView.swift */,
 				29BC3B042A4D745700568446 /* Dummy.swift */,
 				296E4EB229ED680200B51CA3 /* VideoView.swift */,
 				296E4EB729ED71B600B51CA3 /* SongView.swift */,
 				29A02CD42A38B0EB00707244 /* CardLoadingView.swift */,
 				29A02CCC2A3722A800707244 /* CardView.swift */,
 				298BC9EF2A33159900B98536 /* HeartFlagView.swift */,
-				298BC9F12A3316FC00B98536 /* CountryView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";

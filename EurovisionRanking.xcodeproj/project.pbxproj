@@ -29,6 +29,12 @@
 		299A91DD2A6FBA4600069147 /* EurovisionRankingWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 299A91D92A6FBA4400069147 /* EurovisionRankingWidget.intentdefinition */; };
 		299A91DE2A6FBA4600069147 /* EurovisionRankingWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 299A91D92A6FBA4400069147 /* EurovisionRankingWidget.intentdefinition */; };
 		299A91E12A6FBA4600069147 /* EurovisionRankingWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 299A91CF2A6FBA4300069147 /* EurovisionRankingWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		299A91EE2A6FC48E00069147 /* EurovisionRankingShared.h in Headers */ = {isa = PBXBuildFile; fileRef = 299A91ED2A6FC48E00069147 /* EurovisionRankingShared.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		299A91F12A6FC48E00069147 /* EurovisionRankingShared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 299A91EB2A6FC48E00069147 /* EurovisionRankingShared.framework */; };
+		299A91F22A6FC48E00069147 /* EurovisionRankingShared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 299A91EB2A6FC48E00069147 /* EurovisionRankingShared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		299A91F72A6FC4C400069147 /* EurovisionRankingShared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 299A91EB2A6FC48E00069147 /* EurovisionRankingShared.framework */; };
+		299A91F82A6FC4C400069147 /* EurovisionRankingShared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 299A91EB2A6FC48E00069147 /* EurovisionRankingShared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		299A91FD2A6FC4DE00069147 /* SongModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299A91FC2A6FC4DE00069147 /* SongModel.swift */; };
 		29A02CCD2A3722A800707244 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A02CCC2A3722A800707244 /* CardView.swift */; };
 		29A02CCF2A37381200707244 /* SongViewSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A02CCE2A37381200707244 /* SongViewSnapshotTests.swift */; };
 		29A02CD12A37403700707244 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A02CD02A37403700707244 /* Network.swift */; };
@@ -55,6 +61,20 @@
 			remoteGlobalIDString = 299A91CE2A6FBA4300069147;
 			remoteInfo = EurovisionRankingWidgetExtension;
 		};
+		299A91EF2A6FC48E00069147 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 296E4E9929ED5A3800B51CA3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 299A91EA2A6FC48E00069147;
+			remoteInfo = EurovisionRankingShared;
+		};
+		299A91F92A6FC4C400069147 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 296E4E9929ED5A3800B51CA3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 299A91EA2A6FC48E00069147;
+			remoteInfo = EurovisionRankingShared;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -67,6 +87,28 @@
 				299A91E12A6FBA4600069147 /* EurovisionRankingWidgetExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		299A91F62A6FC48F00069147 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				299A91F22A6FC48E00069147 /* EurovisionRankingShared.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		299A91FB2A6FC4C400069147 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				299A91F82A6FC4C400069147 /* EurovisionRankingShared.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -96,6 +138,9 @@
 		299A91D92A6FBA4400069147 /* EurovisionRankingWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = EurovisionRankingWidget.intentdefinition; sourceTree = "<group>"; };
 		299A91DA2A6FBA4500069147 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		299A91DC2A6FBA4600069147 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		299A91EB2A6FC48E00069147 /* EurovisionRankingShared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EurovisionRankingShared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		299A91ED2A6FC48E00069147 /* EurovisionRankingShared.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EurovisionRankingShared.h; sourceTree = "<group>"; };
+		299A91FC2A6FC4DE00069147 /* SongModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongModel.swift; sourceTree = "<group>"; };
 		29A02CCC2A3722A800707244 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		29A02CCE2A37381200707244 /* SongViewSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongViewSnapshotTests.swift; sourceTree = "<group>"; };
 		29A02CD02A37403700707244 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
@@ -117,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B337CBCA2DBE62CEF23F1020 /* Pods_EurovisionRanking.framework in Frameworks */,
+				299A91F12A6FC48E00069147 /* EurovisionRankingShared.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,6 +180,14 @@
 			files = (
 				299A91D32A6FBA4400069147 /* SwiftUI.framework in Frameworks */,
 				299A91D12A6FBA4400069147 /* WidgetKit.framework in Frameworks */,
+				299A91F72A6FC4C400069147 /* EurovisionRankingShared.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		299A91E82A6FC48E00069147 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,6 +211,7 @@
 				296E4EA329ED5A3800B51CA3 /* EurovisionRanking */,
 				298BC9F82A331C1300B98536 /* EurovisionRankingTests */,
 				299A91D42A6FBA4400069147 /* EurovisionRankingWidget */,
+				299A91EC2A6FC48E00069147 /* EurovisionRankingShared */,
 				296E4EA229ED5A3800B51CA3 /* Products */,
 				2403CC105C7F2CC14D5984D1 /* Pods */,
 				FE74D0110FB58FD52F2FA686 /* Frameworks */,
@@ -169,6 +224,7 @@
 				296E4EA129ED5A3800B51CA3 /* EurovisionRanking.app */,
 				298BC9F72A331C1300B98536 /* EurovisionRankingTests.xctest */,
 				299A91CF2A6FBA4300069147 /* EurovisionRankingWidgetExtension.appex */,
+				299A91EB2A6FC48E00069147 /* EurovisionRankingShared.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -244,6 +300,15 @@
 			path = EurovisionRankingWidget;
 			sourceTree = "<group>";
 		};
+		299A91EC2A6FC48E00069147 /* EurovisionRankingShared */ = {
+			isa = PBXGroup;
+			children = (
+				299A91ED2A6FC48E00069147 /* EurovisionRankingShared.h */,
+				299A91FC2A6FC4DE00069147 /* SongModel.swift */,
+			);
+			path = EurovisionRankingShared;
+			sourceTree = "<group>";
+		};
 		79EE5EB82A4A819800194ED3 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
@@ -265,6 +330,17 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		299A91E62A6FC48E00069147 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				299A91EE2A6FC48E00069147 /* EurovisionRankingShared.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
 		296E4EA029ED5A3800B51CA3 /* EurovisionRanking */ = {
 			isa = PBXNativeTarget;
@@ -276,11 +352,13 @@
 				296E4E9F29ED5A3800B51CA3 /* Resources */,
 				2CDBFEA524B573D77B5866A9 /* [CP] Embed Pods Frameworks */,
 				299A91E22A6FBA4600069147 /* Embed Foundation Extensions */,
+				299A91F62A6FC48F00069147 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				299A91E02A6FBA4600069147 /* PBXTargetDependency */,
+				299A91F02A6FC48E00069147 /* PBXTargetDependency */,
 			);
 			name = EurovisionRanking;
 			productName = EurovisionRanking;
@@ -314,15 +392,35 @@
 				299A91CB2A6FBA4300069147 /* Sources */,
 				299A91CC2A6FBA4300069147 /* Frameworks */,
 				299A91CD2A6FBA4300069147 /* Resources */,
+				299A91FB2A6FC4C400069147 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				299A91FA2A6FC4C400069147 /* PBXTargetDependency */,
 			);
 			name = EurovisionRankingWidgetExtension;
 			productName = EurovisionRankingWidgetExtension;
 			productReference = 299A91CF2A6FBA4300069147 /* EurovisionRankingWidgetExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
+		};
+		299A91EA2A6FC48E00069147 /* EurovisionRankingShared */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 299A91F32A6FC48F00069147 /* Build configuration list for PBXNativeTarget "EurovisionRankingShared" */;
+			buildPhases = (
+				299A91E62A6FC48E00069147 /* Headers */,
+				299A91E72A6FC48E00069147 /* Sources */,
+				299A91E82A6FC48E00069147 /* Frameworks */,
+				299A91E92A6FC48E00069147 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EurovisionRankingShared;
+			productName = EurovisionRankingShared;
+			productReference = 299A91EB2A6FC48E00069147 /* EurovisionRankingShared.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -344,6 +442,10 @@
 					299A91CE2A6FBA4300069147 = {
 						CreatedOnToolsVersion = 14.2;
 					};
+					299A91EA2A6FC48E00069147 = {
+						CreatedOnToolsVersion = 14.2;
+						LastSwiftMigration = 1420;
+					};
 				};
 			};
 			buildConfigurationList = 296E4E9C29ED5A3800B51CA3 /* Build configuration list for PBXProject "EurovisionRanking" */;
@@ -362,6 +464,7 @@
 				296E4EA029ED5A3800B51CA3 /* EurovisionRanking */,
 				298BC9F62A331C1300B98536 /* EurovisionRankingTests */,
 				299A91CE2A6FBA4300069147 /* EurovisionRankingWidgetExtension */,
+				299A91EA2A6FC48E00069147 /* EurovisionRankingShared */,
 			);
 		};
 /* End PBXProject section */
@@ -388,6 +491,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				299A91DB2A6FBA4600069147 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		299A91E92A6FC48E00069147 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,6 +629,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		299A91E72A6FC48E00069147 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				299A91FD2A6FC4DE00069147 /* SongModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -531,6 +649,16 @@
 			isa = PBXTargetDependency;
 			target = 299A91CE2A6FBA4300069147 /* EurovisionRankingWidgetExtension */;
 			targetProxy = 299A91DF2A6FBA4600069147 /* PBXContainerItemProxy */;
+		};
+		299A91F02A6FC48E00069147 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 299A91EA2A6FC48E00069147 /* EurovisionRankingShared */;
+			targetProxy = 299A91EF2A6FC48E00069147 /* PBXContainerItemProxy */;
+		};
+		299A91FA2A6FC4C400069147 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 299A91EA2A6FC48E00069147 /* EurovisionRankingShared */;
+			targetProxy = 299A91F92A6FC4C400069147 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -797,6 +925,67 @@
 			};
 			name = Release;
 		};
+		299A91F42A6FC48F00069147 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = learning.EurovisionRankingShared;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		299A91F52A6FC48F00069147 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = learning.EurovisionRankingShared;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -832,6 +1021,15 @@
 			buildConfigurations = (
 				299A91E32A6FBA4600069147 /* Debug */,
 				299A91E42A6FBA4600069147 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		299A91F32A6FC48F00069147 /* Build configuration list for PBXNativeTarget "EurovisionRankingShared" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				299A91F42A6FC48F00069147 /* Debug */,
+				299A91F52A6FC48F00069147 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -8,6 +8,7 @@
 import WidgetKit
 import SwiftUI
 import Intents
+import EurovisionRankingShared
 
 struct Provider: IntentTimelineProvider {
     func placeholder(in context: Context) -> SimpleEntry {
@@ -42,9 +43,18 @@ struct SimpleEntry: TimelineEntry {
 
 struct EurovisionRankingWidgetEntryView : View {
     var entry: Provider.Entry
+    var song: SongModel = SongModel()
 
     var body: some View {
-        Text(entry.date, style: .time)
+        ZStack {
+            Color("WidgetBackground")
+            VStack {
+                Text("123")
+                Spacer()
+            }
+            .foregroundColor(.white)
+            .padding()
+        }
     }
 }
 

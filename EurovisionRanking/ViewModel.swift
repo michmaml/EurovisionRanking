@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import EurovisionRankingShared
 
 @MainActor class ViewModel: ObservableObject {
     private let maxActiveSongs = 2
@@ -50,7 +51,7 @@ import SwiftUI
     
     func selectWinner(for winnerSong: Song) {
         // assumes there are only 2 songs
-        let loserSong = activeSongs.first(where: { $0.videoID != winnerSong.videoID })!
+        let loserSong = activeSongs.first(where: { $0.songModel.videoID != winnerSong.songModel.videoID })!
         
         winnerSong.wins += 1
         loserSong.losses += 1
@@ -64,7 +65,7 @@ import SwiftUI
     
     func addRankedSongs(songs: [Song]) {
         songs.forEach { song in
-            if let index = rankedSongs.firstIndex(where: { $0.videoID == song.videoID }) {
+            if let index = rankedSongs.firstIndex(where: { $0.songModel.videoID == song.songModel.videoID }) {
                 rankedSongs[index] = song
             } else {
                 let index = rankedSongs.firstIndex(where: {
@@ -86,7 +87,7 @@ import SwiftUI
                 
                 let comparisonKey = getComparisonKey(forPreviousSong: previousSong, currentSong: song)
                 if !comparedPairs.contains(comparisonKey) &&
-                    previousSong.videoID != song.videoID {
+                    previousSong.songModel.videoID != song.songModel.videoID {
                     return (previousSong, song)
                 }
             } else {
@@ -97,13 +98,18 @@ import SwiftUI
     }
     
     func getComparisonKey(forPreviousSong previousSong: Song, currentSong: Song) -> String {
-        let sortedStrings = [previousSong.country, currentSong.country].sorted()
+        let sortedStrings = [previousSong.songModel.country, currentSong.songModel.country].sorted()
         return sortedStrings.joined(separator: "-")
     }
     
     public func mapBaseSongsToSongs(for songs: [Network.BaseSong]) -> [Song] {
         return songs.map {
-            Song(country: $0.countryName, artist: $0.artistName, title: $0.songName, videoID: $0.videoId, wins: 0, losses: 0)
+            Song(
+                songModel:
+                    SongModel(country: $0.countryName, artist: $0.artistName, title: $0.songName, videoID: $0.videoId),
+                wins: 0,
+                losses: 0
+            )
         }
     }
 }

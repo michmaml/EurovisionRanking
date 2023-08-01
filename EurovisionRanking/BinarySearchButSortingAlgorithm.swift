@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import EurovisionRankingShared
 
 class SortingAlgorithm {
     var sortedSongs = [Song]()

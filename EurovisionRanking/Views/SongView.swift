@@ -6,13 +6,14 @@
 //
 
 import SwiftUI
+import EurovisionRankingShared
 
 struct SongView: View {
     let song: Song
     var body: some View {
         VStack {
             CountryView(song: song)
-            VideoView(videoID: song.videoID)
+            VideoView(videoID: song.songModel.videoID)
                 .frame(minHeight: 0, maxHeight: UIScreen.main.bounds.height * 0.3)
                 .cornerRadius(10)
         }.padding(.horizontal, 12)
@@ -20,7 +21,7 @@ struct SongView: View {
 }
 
 struct SongView_Previews: PreviewProvider {
-    static var song = Song(country: "", artist: "", title: "", videoID: "", wins: 0, losses: 0)
+    static var song = Song(songModel: SongModel(country: "", artist: "", title: "", videoID: ""), wins: 0, losses: 0)
     static var previews: some View {
         SongView(song: song)
     }

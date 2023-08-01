@@ -7,10 +7,17 @@
 
 import Foundation
 
-struct SongRankingModel {
-    let songModel: SongModel
-    var wins: Int
-    var losses: Int
+public class Song: Identifiable {
+    public var id = UUID()
+    public let songModel: SongModel
+    public var wins: Int
+    public var losses: Int
+    
+    public init(songModel: SongModel, wins: Int, losses: Int) {
+        self.songModel = songModel
+        self.wins = wins
+        self.losses = losses
+    }
 }
 
 public struct SongModel {
@@ -20,7 +27,7 @@ public struct SongModel {
     public let title: String
     public let videoID: String
     
-    init(country: String, artist: String, title: String, videoID: String) {
+    public init(country: String, artist: String, title: String, videoID: String) {
         self.country = country
         self.artist = artist
         self.title = title

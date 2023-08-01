@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Backpack_SwiftUI
+import EurovisionRankingShared
 
 struct CountryView: View {
     @Environment(\.dynamicTypeSize) var dynamicTypeSize
@@ -17,11 +18,11 @@ struct CountryView: View {
         
         HStack {
             layout {
-                HeartFlagView(countryName: song.country.lowercased())
+                HeartFlagView(countryName: song.songModel.country.lowercased())
                 
                 VStack(alignment: .leading) {
-                    BPKText(song.artist, style: .footnote)
-                    BPKText(song.title, style: .heading4)
+                    BPKText(song.songModel.artist, style: .footnote)
+                    BPKText(song.songModel.title, style: .heading4)
                 }
                 
                 Spacer()
@@ -32,7 +33,7 @@ struct CountryView: View {
 }
 
 struct CountryView_Previews: PreviewProvider {
-    static var song = Song(country: "Poland", artist: "Michał Szpak", title: "Color of your life", videoID: "kTsruf7hQXI", wins: 0, losses: 0)
+    static var song = Song(songModel: SongModel(country: "", artist: "", title: "", videoID: ""), wins: 0, losses: 0)
     static var previews: some View {
         CountryView(song: song)
     }

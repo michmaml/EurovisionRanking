@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import EurovisionRankingShared
 
 struct SummaryView: View {
     let songs: [Song]
@@ -49,7 +50,7 @@ struct SummaryView: View {
 }
 
 struct SummaryView_Previews: PreviewProvider {
-    static var song = Song(country: "Poland", artist: "Michał Szpak", title: "Color of your life", videoID: "kTsruf7hQXI", wins: 0, losses: 0)
+    static var song = Song(songModel: SongModel(country: "", artist: "", title: "", videoID: ""), wins: 0, losses: 0)
     static var previews: some View {
         SummaryView(songs: [song])
     }

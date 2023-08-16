@@ -40,6 +40,7 @@
 		29A02CD52A38B0EB00707244 /* CardLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A02CD42A38B0EB00707244 /* CardLoadingView.swift */; };
 		29A23F882A42F80000378536 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A23F872A42F80000378536 /* ViewModel.swift */; };
 		29BC3B032A45E33500568446 /* ContentLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BC3B022A45E33500568446 /* ContentLoadingView.swift */; };
+		29E7E7902A82330A00A72379 /* HeartFlagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298BC9EF2A33159900B98536 /* HeartFlagView.swift */; };
 		29F051CE2A5C611100B8F64D /* BinarySearchButSortingAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F051CD2A5C611100B8F64D /* BinarySearchButSortingAlgorithm.swift */; };
 		B337CBCA2DBE62CEF23F1020 /* Pods_EurovisionRanking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB93044A7FAAB9656DE3B3A6 /* Pods_EurovisionRanking.framework */; };
 /* End PBXBuildFile section */
@@ -144,6 +145,7 @@
 		29A02CD42A38B0EB00707244 /* CardLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardLoadingView.swift; sourceTree = "<group>"; };
 		29A23F872A42F80000378536 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		29BC3B022A45E33500568446 /* ContentLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentLoadingView.swift; sourceTree = "<group>"; };
+		29E7E7912A8236A400A72379 /* EurovisionRankingWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EurovisionRankingWidgetExtension.entitlements; sourceTree = "<group>"; };
 		29F051CD2A5C611100B8F64D /* BinarySearchButSortingAlgorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinarySearchButSortingAlgorithm.swift; sourceTree = "<group>"; };
 		2A3B82901CEA19247FCC8B23 /* Pods_EurovisionRankingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EurovisionRankingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		515597BC19C6BDC2D96EF1DC /* Pods-EurovisionRankingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EurovisionRankingTests.debug.xcconfig"; path = "Target Support Files/Pods-EurovisionRankingTests/Pods-EurovisionRankingTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 		296E4E9829ED5A3800B51CA3 = {
 			isa = PBXGroup;
 			children = (
+				29E7E7912A8236A400A72379 /* EurovisionRankingWidgetExtension.entitlements */,
 				296E4EA329ED5A3800B51CA3 /* EurovisionRanking */,
 				298BC9F82A331C1300B98536 /* EurovisionRankingTests */,
 				299A91D42A6FBA4400069147 /* EurovisionRankingWidget */,
@@ -610,6 +613,7 @@
 				299A91D62A6FBA4400069147 /* EurovisionRankingWidgetBundle.swift in Sources */,
 				299A91D82A6FBA4400069147 /* EurovisionRankingWidget.swift in Sources */,
 				299A91DD2A6FBA4600069147 /* EurovisionRankingWidget.intentdefinition in Sources */,
+				29E7E7902A82330A00A72379 /* HeartFlagView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -785,6 +789,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = skyscanner.michal.EurovisionRanking;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -815,6 +822,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = skyscanner.michal.EurovisionRanking;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -862,6 +872,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = EurovisionRankingWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -877,6 +888,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = skyscanner.michal.EurovisionRanking.EurovisionRankingWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -888,6 +900,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = EurovisionRankingWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -903,6 +916,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = skyscanner.michal.EurovisionRanking.EurovisionRankingWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

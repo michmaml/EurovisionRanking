@@ -18,11 +18,11 @@ struct CountryView: View {
         
         HStack {
             layout {
-                HeartFlagView(countryName: song.songModel.country.lowercased())
+                HeartFlagView(countryName: song.country.lowercased())
                 
                 VStack(alignment: .leading) {
-                    BPKText(song.songModel.artist, style: .footnote)
-                    BPKText(song.songModel.title, style: .heading4)
+                    BPKText(song.artist, style: .footnote)
+                    BPKText(song.title, style: .heading4)
                 }
                 
                 Spacer()

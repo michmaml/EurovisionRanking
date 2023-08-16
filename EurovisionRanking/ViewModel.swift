@@ -65,7 +65,7 @@ import EurovisionRankingShared
     
     func addRankedSongs(songs: [Song]) {
         songs.forEach { song in
-            if let index = rankedSongs.firstIndex(where: { $0.songModel.videoID == song.songModel.videoID }) {
+            if let index = rankedSongs.firstIndex(where: { $0.songModel.videoID == song.videoID }) {
                 rankedSongs[index] = song
             } else {
                 let index = rankedSongs.firstIndex(where: {
@@ -87,7 +87,7 @@ import EurovisionRankingShared
                 
                 let comparisonKey = getComparisonKey(forPreviousSong: previousSong, currentSong: song)
                 if !comparedPairs.contains(comparisonKey) &&
-                    previousSong.songModel.videoID != song.songModel.videoID {
+                    previousSong.songModel.videoID != song.videoID {
                     return (previousSong, song)
                 }
             } else {

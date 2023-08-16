@@ -18,6 +18,11 @@ public class Song: Identifiable {
         self.wins = wins
         self.losses = losses
     }
+    
+    public var country: String { return songModel.country }
+    public var artist: String { return songModel.artist }
+    public var title: String { return songModel.title }
+    public var videoID: String { return songModel.videoID }
 }
 
 public struct SongModel {

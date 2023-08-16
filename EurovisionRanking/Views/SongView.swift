@@ -13,7 +13,7 @@ struct SongView: View {
     var body: some View {
         VStack {
             CountryView(song: song)
-            VideoView(videoID: song.songModel.videoID)
+            VideoView(videoID: song.videoID)
                 .frame(minHeight: 0, maxHeight: UIScreen.main.bounds.height * 0.3)
                 .cornerRadius(10)
         }.padding(.horizontal, 12)

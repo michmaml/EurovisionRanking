@@ -42,35 +42,36 @@ struct SimpleEntry: TimelineEntry {
 }
 
 struct EurovisionRankingWidgetEntryView : View {
-    let coreYTLink = "https://youtu.be/"
     var entry: Provider.Entry
     var song: SongModel = SongModel.data.randomElement()!
 
     var body: some View {
         ZStack {
             Color("WidgetBackground")
-            Link(destination: URL(string: "\(coreYTLink)\(song.videoID)")!) {
+            Link(destination: openIntentInApp(song.videoID)) {
                 VStack {
-                    Image(song.country.lowercased())
-                        .resizable()
-                        .frame(width: 24, height: 27)
-                        .padding(8)
-                        .background(.blue)
-                        .clipShape(Circle())
-                    Text(song.title)
-                        .multilineTextAlignment(.center)
                     Spacer()
-                    HStack {
-                        Text("Listen")
-                        Image(systemName: "link")
-                    }
+                    HeartFlagView(countryName: song.country.lowercased())
+                    Text(song.country)
+                        .font(.callout)
+                        .foregroundColor(.white)
+                    Spacer()
+                    Text("Check it out")
+                        .font(.headline)
+                        .foregroundColor(.white)
+                        .bold()
+                        .underline()
                 }
                 .padding()
             }
             .foregroundColor(.white)
-            .widgetURL(URL(string: "\(coreYTLink)\(song.videoID)"))
+            .widgetURL(openIntentInApp(song.videoID))
         }
     }
+}
+
+func openIntentInApp(_ videoID: String) -> URL! {
+    return URL(string: "eurovisionranking://widget/\(videoID)")
 }
 
 struct EurovisionRankingWidget: Widget {

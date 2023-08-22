@@ -45,12 +45,9 @@ struct ContentView: View {
             }
         }
         .onOpenURL { url in
-            print(url)
-            
             if let videoID = url.videoID {
                 songDetail = SongModel.getSong(withVideoID: videoID)
                 showDetail = true
-                print(showDetail)
             }
         }
     }
@@ -66,7 +63,6 @@ extension URL {
         let queryItems = urlComponents?.queryItems
         
         return queryItems?.first(where: { $0.name == "videoID" })?.value
-    
     }
 }
 

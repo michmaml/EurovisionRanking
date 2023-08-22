@@ -122,6 +122,7 @@
 		296E4EB229ED680200B51CA3 /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
 		296E4EB729ED71B600B51CA3 /* SongView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongView.swift; sourceTree = "<group>"; };
 		296E4EBB29EEB0E000B51CA3 /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
+		298264762A8E0E8200CB8387 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		298BC9EF2A33159900B98536 /* HeartFlagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartFlagView.swift; sourceTree = "<group>"; };
 		298BC9F12A3316FC00B98536 /* CountryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryView.swift; sourceTree = "<group>"; };
 		298BC9F72A331C1300B98536 /* EurovisionRankingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EurovisionRankingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -231,6 +232,7 @@
 		296E4EA329ED5A3800B51CA3 /* EurovisionRanking */ = {
 			isa = PBXGroup;
 			children = (
+				298264762A8E0E8200CB8387 /* Info.plist */,
 				79EE5EB82A4A819800194ED3 /* Screens */,
 				298BC9EE2A33157000B98536 /* Views */,
 				296E4EA429ED5A3800B51CA3 /* EurovisionRankingApp.swift */,
@@ -777,6 +779,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"EurovisionRanking/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EurovisionRanking/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -810,6 +813,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"EurovisionRanking/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EurovisionRanking/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

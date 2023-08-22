@@ -71,7 +71,7 @@ struct EurovisionRankingWidgetEntryView : View {
 }
 
 func openIntentInApp(_ videoID: String) -> URL! {
-    return URL(string: "eurovisionranking://widget/\(videoID)")
+    return URL(string: "eurovisionranking://widget?videoID=\(videoID)")
 }
 
 struct EurovisionRankingWidget: Widget {

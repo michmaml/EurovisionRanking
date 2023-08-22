@@ -54,5 +54,9 @@ public extension SongModel {
         SongModel(country: "Austria", artist: "Teya & Salena", title: "Who The Hell Is Edgar?", videoID: "ZMmModelLeV47Au4"),
         SongModel(country: "Czechia", artist: "Vesna", title: "My Sister's Crown", videoID: "-y78qgDlzAM")
     ]
+    
+    static func getSong(withVideoID videoID: String) -> Song? {
+        guard let songModel = SongModel.data.first(where: { $0.videoID == videoID}) else { return nil }
+        return Song(songModel: songModel, wins: 0, losses: 0)
+    }
 }
-

@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		13EBF0EED62A4A4379F43DCB /* Pods_EurovisionRankingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A3B82901CEA19247FCC8B23 /* Pods_EurovisionRankingTests.framework */; };
 		296E4EA529ED5A3800B51CA3 /* EurovisionRankingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296E4EA429ED5A3800B51CA3 /* EurovisionRankingApp.swift */; };
-		296E4EA729ED5A3800B51CA3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296E4EA629ED5A3800B51CA3 /* ContentView.swift */; };
+		296E4EA729ED5A3800B51CA3 /* EurovisionAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296E4EA629ED5A3800B51CA3 /* EurovisionAppView.swift */; };
 		296E4EA929ED5A3900B51CA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 296E4EA829ED5A3900B51CA3 /* Assets.xcassets */; };
 		296E4EAC29ED5A3900B51CA3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 296E4EAB29ED5A3900B51CA3 /* Preview Assets.xcassets */; };
 		296E4EB329ED680200B51CA3 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296E4EB229ED680200B51CA3 /* VideoView.swift */; };
@@ -40,6 +40,8 @@
 		29A02CD52A38B0EB00707244 /* CardLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A02CD42A38B0EB00707244 /* CardLoadingView.swift */; };
 		29A23F882A42F80000378536 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A23F872A42F80000378536 /* ViewModel.swift */; };
 		29BC3B032A45E33500568446 /* ContentLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BC3B022A45E33500568446 /* ContentLoadingView.swift */; };
+		29D6EADF2AA9BD770093AF52 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D6EADE2AA9BD770093AF52 /* ContentView.swift */; };
+		29D6EAE22AA9BF910093AF52 /* PasswordGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D6EAE12AA9BF910093AF52 /* PasswordGameView.swift */; };
 		29E7E7902A82330A00A72379 /* HeartFlagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298BC9EF2A33159900B98536 /* HeartFlagView.swift */; };
 		29F051CE2A5C611100B8F64D /* BinarySearchButSortingAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F051CD2A5C611100B8F64D /* BinarySearchButSortingAlgorithm.swift */; };
 		B337CBCA2DBE62CEF23F1020 /* Pods_EurovisionRanking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB93044A7FAAB9656DE3B3A6 /* Pods_EurovisionRanking.framework */; };
@@ -116,7 +118,7 @@
 		220F9C917610341E78EBCFE5 /* Pods-EurovisionRankingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EurovisionRankingTests.release.xcconfig"; path = "Target Support Files/Pods-EurovisionRankingTests/Pods-EurovisionRankingTests.release.xcconfig"; sourceTree = "<group>"; };
 		296E4EA129ED5A3800B51CA3 /* EurovisionRanking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EurovisionRanking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		296E4EA429ED5A3800B51CA3 /* EurovisionRankingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EurovisionRankingApp.swift; sourceTree = "<group>"; };
-		296E4EA629ED5A3800B51CA3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		296E4EA629ED5A3800B51CA3 /* EurovisionAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EurovisionAppView.swift; sourceTree = "<group>"; };
 		296E4EA829ED5A3900B51CA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		296E4EAB29ED5A3900B51CA3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		296E4EB229ED680200B51CA3 /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
@@ -146,6 +148,8 @@
 		29A02CD42A38B0EB00707244 /* CardLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardLoadingView.swift; sourceTree = "<group>"; };
 		29A23F872A42F80000378536 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		29BC3B022A45E33500568446 /* ContentLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentLoadingView.swift; sourceTree = "<group>"; };
+		29D6EADE2AA9BD770093AF52 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		29D6EAE12AA9BF910093AF52 /* PasswordGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordGameView.swift; sourceTree = "<group>"; };
 		29E7E7912A8236A400A72379 /* EurovisionRankingWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EurovisionRankingWidgetExtension.entitlements; sourceTree = "<group>"; };
 		29F051CD2A5C611100B8F64D /* BinarySearchButSortingAlgorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinarySearchButSortingAlgorithm.swift; sourceTree = "<group>"; };
 		2A3B82901CEA19247FCC8B23 /* Pods_EurovisionRankingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EurovisionRankingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -232,11 +236,13 @@
 		296E4EA329ED5A3800B51CA3 /* EurovisionRanking */ = {
 			isa = PBXGroup;
 			children = (
+				29D6EAE02AA9BF510093AF52 /* PasswordGame */,
 				298264762A8E0E8200CB8387 /* Info.plist */,
 				79EE5EB82A4A819800194ED3 /* Screens */,
 				298BC9EE2A33157000B98536 /* Views */,
 				296E4EA429ED5A3800B51CA3 /* EurovisionRankingApp.swift */,
-				296E4EA629ED5A3800B51CA3 /* ContentView.swift */,
+				29D6EADE2AA9BD770093AF52 /* ContentView.swift */,
+				296E4EA629ED5A3800B51CA3 /* EurovisionAppView.swift */,
 				29F051CD2A5C611100B8F64D /* BinarySearchButSortingAlgorithm.swift */,
 				29A23F872A42F80000378536 /* ViewModel.swift */,
 				296E4EA829ED5A3900B51CA3 /* Assets.xcassets */,
@@ -298,6 +304,14 @@
 				299A91FC2A6FC4DE00069147 /* SongModel.swift */,
 			);
 			path = EurovisionRankingShared;
+			sourceTree = "<group>";
+		};
+		29D6EAE02AA9BF510093AF52 /* PasswordGame */ = {
+			isa = PBXGroup;
+			children = (
+				29D6EAE12AA9BF910093AF52 /* PasswordGameView.swift */,
+			);
+			path = PasswordGame;
 			sourceTree = "<group>";
 		};
 		79EE5EB82A4A819800194ED3 /* Screens */ = {
@@ -589,8 +603,10 @@
 				29A02CCD2A3722A800707244 /* CardView.swift in Sources */,
 				29A02CD12A37403700707244 /* Network.swift in Sources */,
 				29A23F882A42F80000378536 /* ViewModel.swift in Sources */,
+				29D6EAE22AA9BF910093AF52 /* PasswordGameView.swift in Sources */,
 				296E4EB829ED71B600B51CA3 /* SongView.swift in Sources */,
-				296E4EA729ED5A3800B51CA3 /* ContentView.swift in Sources */,
+				296E4EA729ED5A3800B51CA3 /* EurovisionAppView.swift in Sources */,
+				29D6EADF2AA9BD770093AF52 /* ContentView.swift in Sources */,
 				296E4EA529ED5A3800B51CA3 /* EurovisionRankingApp.swift in Sources */,
 				296E4EBC29EEB0E000B51CA3 /* SummaryView.swift in Sources */,
 				29A02CD52A38B0EB00707244 /* CardLoadingView.swift in Sources */,
